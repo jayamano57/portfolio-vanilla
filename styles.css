@@ -1,0 +1,39 @@
+/* Global Resets */
+*,
+*::before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+}
+
+body {
+  box-sizing: border-box;
+  padding: 3rem;
+}
+
+/* VARIABLES */
+:root {
+  --color-primary: rgb(197, 163, 85);
+  --color-primary-opacity: rgba(197, 163, 85, 0.8);
+  --color-primary-light: rgb(197, 176, 125);
+  --color-primary-light-opacity: rgba(197, 176, 125, 0.8);
+  --color-primary-dark: rgb(184, 138, 32);
+  --color-primary-dark-opacity: rgba(184, 138, 32, 0.8);
+}
+
+/* HEADER */
+.header {
+  height: 100vh;
+  background-image: linear-gradient(
+      to right bottom,
+      var(--color-primary-light-opacity),
+      var(--color-primary-dark-opacity)
+    ),
+    url(./media/tokyo_day.jpg);
+  background-size: cover;
+}
