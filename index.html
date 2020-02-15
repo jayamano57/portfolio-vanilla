@@ -4,13 +4,191 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
     <title>Jay Amano</title>
   </head>
   <body>
+    <div class="navigation">
+      <button class="nav-btn"><span class="nav-icon"></span></button>
+      <div class="nav-background"></div>
+      <nav class="navigation-nav">
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span>01</span>HOME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span>02</span>ABOUT ME</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span>03</span>PROJECTS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><span>04</span>CONTACT ME</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
-      <div class="title-box">
-        Jay Amano
-      </div>
+      <h1 class="title-box">
+        <span class="title-box-name">Jay Amano</span> <br />
+        <span class="title-box-title">Web Developer</span>
+      </h1>
     </header>
+    <main>
+      <section class="about-me">
+        <h2 class="section-heading">ABOUT ME</h2>
+        <div class="about-me-content">
+          <div class="about-me-blurb">
+            <span class="blurb-intro">Hi! My name is Jay!</span> Lorem ipsum
+            dolor, sit amet consectetur adipisicing elit. Praesentium sunt,
+            maiores a, quaerat animi consequuntur ex atque odit ad aperiam
+            suscipit vel cum quibusdam laudantium quas aliquam quod, quia
+            veritatis! Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Suscipit explicabo veritatis aliquam cum enim tempore facere
+            voluptatibus sint quae, corporis repellat amet fuga itaque expedita
+            blanditiis harum ad at nemo. Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Molestias facere commodi perferendis tempore
+            voluptatem nulla quasi nam deleniti. Soluta, vel doloremque beatae
+            dolores rerum praesentium expedita sunt. Harum, et recusandae. Lorem
+            ipsum dolor sit amet consectetur adipisicing elit. Sint, impedit
+            neque? Error ipsam at quo reprehenderit. Molestiae soluta, inventore
+            officia exercitationem modi, consequatur nemo odio porro sint
+            repudiandae quas et!
+          </div>
+          <div class="about-me-img-gallery">
+            <div class="about-me-img-1"></div>
+            <div class="about-me-img-2"></div>
+            <div class="about-me-img-3"></div>
+          </div>
+        </div>
+      </section>
+      <section class="projects">
+        <h2 class="section-heading-light">PROJECTS</h2>
+        <div class="projects-container">
+          <div class="ghost-card"></div>
+          <div class="project-card project-1">
+            <div class="card-front">
+              <figure>
+                <img
+                  class="project-img"
+                  src="./media/personal-site.png"
+                  alt="placeholder image"
+                />
+                <figcaption>Personal Site</figcaption>
+              </figure>
+              <div class="project-description-short">
+                A short description for my personal site goes here
+              </div>
+              <button class="more-info-btn">MORE INFO &rarr;</button>
+            </div>
+            <div class="card-back">Project Info</div>
+          </div>
+          <div class="project-card project-2">
+            <div class="card-front">
+              <figure>
+                <img
+                  class="project-img"
+                  src="./media/sp-logo.png"
+                  alt="placeholder image"
+                />
+                <figcaption>Seller's Place</figcaption>
+              </figure>
+              <div class="project-description-short">
+                A short description for Seller's Place goes here
+              </div>
+              <button class="more-info-btn">MORE INFO &rarr;</button>
+            </div>
+            <div class="card-back">Project Info</div>
+          </div>
+          <div class="project-card project-3">
+            <div class="card-front">
+              <figure>
+                <img
+                  class="project-img"
+                  src="./media/placeholder-img.png"
+                  alt="placeholder image"
+                />
+                <figcaption>McMacro</figcaption>
+              </figure>
+              <div class="project-description-short">
+                A short description for McMacro goes here
+              </div>
+              <button class="more-info-btn">MORE INFO &rarr;</button>
+            </div>
+            <div class="card-back">Project Info</div>
+          </div>
+          <div class="project-card project-4">
+            <div class="card-front">
+              <figure>
+                <img
+                  class="project-img"
+                  src="./media/placeholder-img.png"
+                  alt="placeholder image"
+                />
+                <figcaption>Foodr</figcaption>
+              </figure>
+              <div class="project-description-short">
+                A short description for Foodr goes here
+              </div>
+              <button class="more-info-btn">MORE INFO &rarr;</button>
+            </div>
+            <div class="card-back">Project Info</div>
+          </div>
+          <button class="arrow-btn right-arrow-btn"></button>
+          <button class="arrow-btn left-arrow-btn"></button>
+        </div>
+      </section>
+      <section class="contact-form">
+        <div class="contact-container">
+          <!-- <div class="contact"> -->
+          <div class="bg-video">
+            <video class="bg-video-content" autoplay muted loop>
+              <source
+                src="media/cover-video/cover-video-typing.mp4"
+                type="video/mp4"
+              />
+              Your browser is not supported
+            </video>
+          </div>
+          <form action="#" class="contact-form-form">
+            <h2 class="section-heading-light contact-heading">CONTACT ME</h2>
+            <fieldset>
+              <div class="form-group group-email">
+                <input
+                  type="email"
+                  class="form-input email-input"
+                  placeholder="Email address"
+                  id="email"
+                  required
+                />
+                <label for="email">Email address</label>
+              </div>
+              <div class="form-group group-message">
+                <textarea
+                  class="form-input message-input"
+                  placeholder="Your message here..."
+                  id="message"
+                  rows="10"
+                ></textarea>
+                <label for="message">Your message here...</label>
+              </div>
+            </fieldset>
+            <button class="send-contact-btn" type="submit">Send</button>
+          </form>
+          <div class="other-contact-mediums">
+            <ul class="contact-list">
+              <li><a href="#">email: jayamano57@gmail.com</a></li>
+              <li><a href="#">phone: (818) 264-8194</a></li>
+              <li><a href="#">linkedIn: www.linkedIn.com</a></li>
+            </ul>
+          </div>
+          <!-- </div> -->
+        </div>
+      </section>
+    </main>
+    <script src="./index.js"></script>
   </body>
 </html>

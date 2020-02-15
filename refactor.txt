@@ -1,0 +1,10 @@
+1. refactor class names, especially the contact
+2. if you can put label before input, do that. first have to find out if you can target previous siblibg
+3. add some more variables for colors
+4. modules
+5. add classes to contact-list items
+6. backup for contact form if video fails
+
+
+** carousel
+    transform: translateX(-132%);
