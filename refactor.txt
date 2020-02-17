@@ -4,7 +4,9 @@
 4. modules
 5. add classes to contact-list items
 6. backup for contact form if video fails
-
+7. disable button while animating
+8. add data attributes to project cards
+9. dynamically create these cards using a card template, thuse dynamically creating position
 
 ** carousel
     transform: translateX(-132%);
