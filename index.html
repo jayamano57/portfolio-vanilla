@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/d391db31fc.js"
+      crossorigin="anonymous"
+    ></script>
     <title>Jay Amano</title>
   </head>
   <body>
@@ -17,16 +21,33 @@
       <nav class="navigation-nav">
         <ul class="nav-list">
           <li class="nav-item">
-            <a class="nav-link" href="#"><span>01</span>HOME</a>
+            <a class="nav-link home-link" data-section="header" href="#home"
+              ><span>01</span>HOME</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><span>02</span>ABOUT ME</a>
+            <a
+              class="nav-link about-me-link"
+              data-section="about-me"
+              href="#about"
+              ><span>02</span>ABOUT ME</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><span>03</span>PROJECTS</a>
+            <a
+              class="nav-link projects-link"
+              data-section="projects"
+              href="#projects"
+              ><span>03</span>PROJECTS</a
+            >
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#"><span>04</span>CONTACT ME</a>
+            <a
+              class="nav-link contact-me-link"
+              data-section="contact-form"
+              href="#contact"
+              ><span>04</span>CONTACT ME</a
+            >
           </li>
         </ul>
       </nav>
@@ -59,9 +80,21 @@
             repudiandae quas et!
           </div>
           <div class="about-me-img-gallery">
-            <div class="about-me-img-1"></div>
-            <div class="about-me-img-2"></div>
-            <div class="about-me-img-3"></div>
+            <img
+              src="./media/placeholder-img.png"
+              alt="picture 1"
+              class="about-me-img-1"
+            />
+            <img
+              src="./media/placeholder-img.png"
+              alt="picture 2"
+              class="about-me-img-2"
+            />
+            <img
+              src="./media/placeholder-img.png"
+              alt="picture 3"
+              class="about-me-img-3"
+            />
           </div>
         </div>
       </section>
@@ -69,73 +102,61 @@
         <h2 class="section-heading-light">PROJECTS</h2>
         <div class="projects-container">
           <div class="carousel">
-            <div class="project-card left project-1">
-              <div class="card-front">
-                <figure>
-                  <img
-                    class="project-img"
-                    src="./media/personal-site.png"
-                    alt="placeholder image"
-                  />
-                  <figcaption>Personal Site</figcaption>
-                </figure>
-                <div class="project-description-short">
-                  A short description for my personal site goes here
-                </div>
-                <button class="more-info-btn">MORE INFO &rarr;</button>
+            <div class="project-card project-1" data-name="personal">
+              <figure>
+                <img
+                  class="project-img"
+                  src="./media/personal-site.png"
+                  alt="placeholder image"
+                />
+                <figcaption>Personal Site</figcaption>
+              </figure>
+              <div class="project-description-short">
+                A short description for my personal site goes here
               </div>
-              <div class="card-back">Project Info</div>
+              <button class="more-info-btn">MORE INFO &rarr;</button>
             </div>
-            <div class="project-card middle project-2">
-              <div class="card-front">
-                <figure>
-                  <img
-                    class="project-img"
-                    src="./media/sp-logo.png"
-                    alt="placeholder image"
-                  />
-                  <figcaption>Seller's Place</figcaption>
-                </figure>
-                <div class="project-description-short">
-                  A short description for Seller's Place goes here
-                </div>
-                <button class="more-info-btn">MORE INFO &rarr;</button>
+            <div class="project-card project-2" data-name="sellers">
+              <figure>
+                <img
+                  class="project-img"
+                  src="./media/sp-logo.png"
+                  alt="placeholder image"
+                />
+                <figcaption>Seller's Place</figcaption>
+              </figure>
+              <div class="project-description-short">
+                A short description for Seller's Place goes here
               </div>
-              <div class="card-back">Project Info</div>
+              <button class="more-info-btn">MORE INFO &rarr;</button>
             </div>
-            <div class="project-card right project-3">
-              <div class="card-front">
-                <figure>
-                  <img
-                    class="project-img"
-                    src="./media/placeholder-img.png"
-                    alt="placeholder image"
-                  />
-                  <figcaption>McMacro</figcaption>
-                </figure>
-                <div class="project-description-short">
-                  A short description for McMacro goes here
-                </div>
-                <button class="more-info-btn">MORE INFO &rarr;</button>
+            <div class="project-card project-3" data-name="mcmacro">
+              <figure>
+                <img
+                  class="project-img"
+                  src="./media/placeholder-img.png"
+                  alt="placeholder image"
+                />
+                <figcaption>McMacro</figcaption>
+              </figure>
+              <div class="project-description-short">
+                A short description for McMacro goes here
               </div>
-              <div class="card-back">Project Info</div>
+              <button class="more-info-btn">MORE INFO &rarr;</button>
             </div>
-            <div class="project-card left project-4">
-              <div class="card-front">
-                <figure>
-                  <img
-                    class="project-img"
-                    src="./media/placeholder-img.png"
-                    alt="placeholder image"
-                  />
-                  <figcaption>Foodr</figcaption>
-                </figure>
-                <div class="project-description-short">
-                  A short description for Foodr goes here
-                </div>
-                <button class="more-info-btn">MORE INFO &rarr;</button>
+            <div class="project-card project-4" data-name="foodr">
+              <figure>
+                <img
+                  class="project-img"
+                  src="./media/placeholder-img.png"
+                  alt="placeholder image"
+                />
+                <figcaption>Foodr</figcaption>
+              </figure>
+              <div class="project-description-short">
+                A short description for Foodr goes here
               </div>
-              <div class="card-back">Project Info</div>
+              <button class="more-info-btn">MORE INFO &rarr;</button>
             </div>
           </div>
           <button class="arrow-btn right-arrow-btn"></button>
@@ -182,15 +203,50 @@
           </form>
           <div class="other-contact-mediums">
             <ul class="contact-list">
-              <li><a href="#">email: jayamano57@gmail.com</a></li>
-              <li><a href="#">phone: (818) 264-8194</a></li>
-              <li><a href="#">linkedIn: www.linkedIn.com</a></li>
+              <li>
+                <a href="mailto:jayamano57@gmail.com"
+                  ><i class="fas fa-at"></i> jayamano57@gmail.com</a
+                >
+              </li>
+              <li>
+                <a href="tel:8182648194"
+                  ><i class="fas fa-phone"></i> (818) 264-8194</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/in/jay-amano-143475b2/"
+                  target="_blank"
+                  ><i class="fab fa-linkedin-in"></i> www.linkedIn.com</a
+                >
+              </li>
             </ul>
           </div>
           <!-- </div> -->
         </div>
       </section>
     </main>
+    <div class="modal">
+      <div class="modal-content">
+        <button class="close-modal-btn">&times;</button>
+        <div class="demo">
+          <div class="video"></div>
+          <div class="external-links">
+            <h3>Made with:</h3>
+            <div class="modal-technologies"></div>
+          </div>
+        </div>
+        <div class="modal-details-wrapper">
+          <div class="modal-details">details</div>
+          <a
+            class="github-link"
+            href="https://github.com/jayamano57"
+            target="_blank"
+            ><i class="fab fa-github"></i> View on GitHub</a
+          >
+        </div>
+      </div>
+    </div>
     <script src="./index.js"></script>
   </body>
 </html>

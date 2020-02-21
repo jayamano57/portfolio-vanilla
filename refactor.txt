@@ -7,6 +7,23 @@
 7. disable button while animating
 8. add data attributes to project cards
 9. dynamically create these cards using a card template, thuse dynamically creating position
+10. clean up z-indexes
 
-** carousel
-    transform: translateX(-132%);
+=======
+
+
+- live link?
+- view on github link
+- validation
+- email node
+- backup for if video doesnt load
+- accessibility
+- responsive
+- modularize
+- webpack
+- cross browser
+
+
+======= backlog
+- image resolution to decrease load size
+- dark mode
