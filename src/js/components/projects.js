@@ -1,3 +1,17 @@
+import { data } from "../data.js";
+
+import {
+  carousel,
+  rightArrowBtn,
+  leftArrowBtn,
+  closeModalBtn,
+  pageDotsContainer,
+  modal,
+  technologiesContainerEl,
+  videoEl,
+  descriptionEl
+} from "../elements.js";
+
 const carouselWidth = carousel.offsetWidth;
 const cardCount = data.projects.length;
 const pageCount = Math.ceil(cardCount / 3);
@@ -5,7 +19,7 @@ let slideNumber = 1;
 let offset = 0;
 const maxX = -(Math.floor(cardCount / 3) * carouselWidth);
 
-const renderProjects = () => {
+export const renderProjects = () => {
   let projectNum = 1;
   data.projects.map((project, index) => {
     carousel.innerHTML += `
@@ -31,7 +45,7 @@ const renderProjects = () => {
   initPageDots();
 };
 
-const carouselScroll = e => {
+export const carouselScroll = e => {
   switch (e.currentTarget.dataset.direction) {
     case "right":
       slideNumber += 1;
@@ -53,7 +67,8 @@ const carouselScroll = e => {
   showOrHideArrowBtn();
   updatePageDots();
 };
-const updateCardVisibility = () => {
+
+export const updateCardVisibility = () => {
   const cards = document.querySelectorAll(".project-card");
   cards.forEach(project => {
     project.classList.add("hidden");
@@ -73,7 +88,8 @@ const updateCardVisibility = () => {
         [slideNumber * 3 - 1].classList.remove("hidden");
   }
 };
-const showOrHideArrowBtn = () => {
+
+export const showOrHideArrowBtn = () => {
   if (slideNumber === pageCount) {
     rightArrowBtn.style.visibility = "hidden";
     leftArrowBtn.style.visibility = "visible";
@@ -86,34 +102,34 @@ const showOrHideArrowBtn = () => {
   }
 };
 
-const updatePageDots = () => {
+export const updatePageDots = () => {
   for (let i = 0; i < pageCount; i++) {
     pageDotsContainer.children[i].classList.remove("active");
   }
   pageDotsContainer.children[slideNumber - 1].classList.add("active");
 };
 
-const initPageDots = () => {
+export const initPageDots = () => {
   for (let i = 0; i < pageCount; i++) {
     pageDotsContainer.innerHTML += "<span></span>";
   }
   pageDotsContainer.children[0].classList.add("active");
 };
 
-const openModal = e => {
+export const openModal = e => {
   clearModal();
   const project = e.currentTarget.offsetParent.dataset.name;
   populateModal(project);
   modal.classList.add("open");
 };
 
-const clearModal = () => {
+export const clearModal = () => {
   technologiesContainerEl.innerHTML = "";
   videoEl.innerHTML = "";
   descriptionEl.innerHTML = "";
 };
 
-const populateModal = projectName => {
+export const populateModal = projectName => {
   const index = data.projects.findIndex(project => {
     return project.name === projectName;
   });
@@ -150,7 +166,7 @@ const populateModal = projectName => {
     );
 };
 
-const closeModal = e => {
+export const closeModal = e => {
   if (e.target === e.currentTarget || e.currentTarget === closeModalBtn) {
     modal.classList.remove("open");
   }

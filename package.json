@@ -1,11 +1,26 @@
 {
   "name": "jay-amano-2.0",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jayamano57/jayamano-2.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jayamano57/jayamano-2/issues"
+  },
+  "homepage": "https://github.com/jayamano57/jayamano-2#readme",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.4.3"
+  }
 }
