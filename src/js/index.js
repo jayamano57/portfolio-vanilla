@@ -1,6 +1,4 @@
 // ======== ELEMENTS ========
-import * as elements from "./elements.js";
-console.log(elements);
 const navBtn = document.querySelector(".navigation");
 const arrowBtn = document.querySelectorAll(".arrow-btn");
 const leftArrowBtn = document.querySelector(".left-arrow-btn");
@@ -287,7 +285,7 @@ const closeModal = e => {
 renderProjects();
 
 // ======== EVENTS ========
-elements.navBtn.addEventListener("click", toggleNav);
+navBtn.addEventListener("click", toggleNav);
 arrowBtn.forEach(arrow => {
   arrow.addEventListener("click", carouselScroll);
 });
