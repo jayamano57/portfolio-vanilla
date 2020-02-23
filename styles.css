@@ -543,8 +543,8 @@ figcaption {
 
 .more-info-btn:hover {
   cursor: pointer;
-  color: #ababab;
-  border-color: #ababab;
+  color: #6a5015;
+  border-color: #6a5015;
 }
 
 .more-info-btn:focus {
@@ -618,11 +618,11 @@ figcaption {
   outline: none;
 }
 
-.group-email {
+.group-name {
   margin-bottom: 5rem;
 }
 
-.email-input {
+.name-input {
   border: none;
   border-bottom: 1px solid white;
   background-color: transparent;
@@ -644,7 +644,7 @@ label {
 }
 
 /*  TRY AND FINGURE OUT HOW TO TARGET PREVIOUS SIBLING. IF THERE IS A WAY, SWITCH ORDER OF LABEL AND INPUT SO INPUT GOES AFTER LABEL  */
-.email-input + label {
+.name-input + label {
   transform: translateY(-7rem);
 }
 
@@ -652,7 +652,7 @@ label {
   transform: translateY(-31rem);
 }
 
-.email-input:placeholder-shown + label {
+.name-input:placeholder-shown + label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-4rem);
@@ -673,6 +673,7 @@ fieldset {
 }
 
 .send-contact-btn {
+  box-shadow: 0 2px 0.5rem #848484;
   display: block;
   margin-left: auto;
   height: 4rem;
@@ -683,6 +684,20 @@ fieldset {
   border: none;
   color: #5f594b;
   border-radius: 20px;
+  transition: all 0.2s;
+}
+
+.send-contact-btn:hover {
+  box-shadow: 0 2px 1rem #636262;
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+.send-contact-btn:active {
+  box-shadow: 0 2px 0.5rem #848484;
+  transform: translateY(0);
+}
+.send-contact-btn:focus {
+  outline: none;
 }
 
 .other-contact-mediums {
@@ -745,6 +760,7 @@ fieldset {
 
 .modal {
   opacity: 0;
+  perspective: 80rem;
   visibility: hidden;
   height: 100vh;
   width: 100%;
@@ -756,13 +772,14 @@ fieldset {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all 0.25s;
+  transition: all 0.25s ease-out;
 }
 
 .modal-content {
   width: 60%;
   /* height: 75vh; */
-  transform: translateY(10rem);
+  /* transform: rotateX(-90deg); */
+  transform: rotateX(-90deg) translateY(30rem);
   background-color: #fff4dcd9;
   border-radius: 3px;
   transition: all 0.5s;
@@ -777,7 +794,7 @@ fieldset {
 }
 
 .modal.open .modal-content {
-  transform: translateY(0);
+  transform: rotateX(0) translateY(0);
   display: flex;
 }
 

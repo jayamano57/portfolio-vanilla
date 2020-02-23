@@ -1,8 +1,10 @@
-const toggleNav = () => {
+import { navBtn } from "../elements.js";
+
+export const toggleNav = () => {
   navBtn.classList.toggle("open");
 };
 
-const scrollToSection = e => {
+export const scrollToSection = e => {
   const section = e.currentTarget.dataset.section;
   const sectionHeaderEl = document.querySelector(`.${section}`)
     .firstElementChild;
@@ -15,13 +17,13 @@ const scrollToSection = e => {
       y = 0;
       break;
     case "about-me":
-      y = currentY + elCoords.y - 140;
+      y = currentY + elCoords.y - 10;
       break;
     case "projects":
-      y = currentY + elCoords.y - 50;
+      y = currentY + elCoords.y - 10;
       break;
     case "contact-form":
-      y = currentY + elCoords.y - 30;
+      y = currentY + elCoords.y - 50;
       break;
     default:
       return;
