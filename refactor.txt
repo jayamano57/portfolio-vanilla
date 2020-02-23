@@ -10,16 +10,16 @@
 10. clean up z-indexes
 
 =======
+To-do
+- go step-by-step and add in modules
+=======
 
-- add less/scss as a technology
 - live link?
-- view on github link
-- validation
-- email node
-- backup for if video doesnt load
-- accessibility
+- validation *
+- accessibility?
+- modularize / html templates?
 - responsive
-- modularize
+- email node
 - webpack
 - cross browser
 

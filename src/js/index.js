@@ -1,11 +1,13 @@
 // ======== ELEMENTS ========
+import * as elements from "./elements.js";
+console.log(elements);
 const navBtn = document.querySelector(".navigation");
+const arrowBtn = document.querySelectorAll(".arrow-btn");
 const leftArrowBtn = document.querySelector(".left-arrow-btn");
 const rightArrowBtn = document.querySelector(".right-arrow-btn");
 const card = document.querySelector(".project-card");
 const carousel = document.querySelector(".carousel");
 const pageDotsContainer = document.querySelector(".page-dots");
-const moreInfoBtn = document.querySelectorAll(".more-info-btn");
 const modal = document.querySelector(".modal");
 const closeModalBtn = document.querySelector(".close-modal-btn");
 const videoEl = modal.querySelector(".video");
@@ -15,10 +17,12 @@ const navLink = document.querySelectorAll(".nav-link");
 
 // ======== DATA ========
 const data = {
-  projects: {
-    personal: {
+  projects: [
+    {
+      title: "Personal Site",
+      name: "personal",
       demo: "https://www.youtube.com/embed/tgbNymZ7vqY",
-      screenshot: "./media/placeholder-img.png",
+      screenshot: "./media/personal-site.png",
       technologies: [
         { url: "./media/tech-imgs/html-css-js.png", name: "html | js | css" },
         { url: "./media/tech-imgs/nodejs.png", name: "node.js" },
@@ -26,11 +30,15 @@ const data = {
         { url: "./media/tech-imgs/babel.png", name: "babel" },
         { url: "./media/tech-imgs/webpack.png", name: "webpack" }
       ],
-      description: "personal site description"
+      shortDescription: "A short description for my personal site goes here",
+      description: "personal site description",
+      gitHub: "https://github.com/jayamano57/jayamano-2"
     },
-    sellers: {
+    {
+      title: "Sellers Place",
+      name: "sellers",
       demo: "https://www.youtube.com/embed/tgbNymZ7vqY",
-      screenshot: "./media/placeholder-img.png",
+      screenshot: "./media/sp-logo.png",
       technologies: [
         { url: "./media/tech-imgs/React-01.png", name: "React.js" },
         { url: "./media/tech-imgs/bootstrap.png", name: "Bootstrap" },
@@ -38,22 +46,30 @@ const data = {
         { url: "./media/tech-imgs/expressjs-icon.png", name: "express.js" },
         { url: "./media/tech-imgs/ms_sql.png", name: "sql server" }
       ],
+      shortDescription: "A short description for sellers place goes here",
       description: "sellers place description"
     },
-    mcmacro: {
+    {
+      title: "McMacro",
+      name: "mcmacro",
       demo: "https://www.youtube.com/embed/tgbNymZ7vqY",
       screenshot: "./media/placeholder-img.png",
       technologies: [
         { url: "./media/tech-imgs/React-01.png", name: "React.js" },
+        { url: "./media/tech-imgs/sass.png", name: "Sass" },
         { url: "./media/tech-imgs/material-ui.png", name: "Material UI" },
         { url: "./media/tech-imgs/nodejs.png", name: "node.js" },
         { url: "./media/tech-imgs/expressjs-icon.png", name: "express.js" },
         { url: "./media/tech-imgs/jquery.png", name: "jQuery" },
         { url: "", name: "Cheerio.js" }
       ],
-      description: "mcmacro app description"
+      shortDescription: "A short description for McMacro goes here",
+      description: "mcmacro app description",
+      gitHub: "https://github.com/jayamano57/mcmacro"
     },
-    foodr: {
+    {
+      title: "Foodr",
+      name: "foodr",
       demo: "https://www.youtube.com/embed/tgbNymZ7vqY",
       screenshot: "./media/placeholder-img.png",
       technologies: [
@@ -63,9 +79,10 @@ const data = {
         { url: "./media/tech-imgs/yelp.png", name: "Yelp API" },
         { url: "", name: "Material Kit" }
       ],
+      shortDescription: "A short description for my foodr goes here",
       description: "foodr app description"
     }
-  }
+  ]
 };
 
 // ======== COMPONENTS ========
@@ -110,29 +127,78 @@ const scrollToSection = e => {
 // PROJECTS
 
 const carouselWidth = carousel.offsetWidth;
-const cardStyle = card.currentStyle || window.getComputedStyle(card);
-const cardCount = carousel.querySelectorAll(".project-card").length;
+const cardCount = data.projects.length;
 const pageCount = Math.ceil(cardCount / 3);
 let slideNumber = 1;
 let offset = 0;
 const maxX = -(Math.floor(cardCount / 3) * carouselWidth);
 
-const scrollProjectsRight = e => {
-  slideNumber += 1;
-  showOrHideArrowBtn();
-  updatePageDots();
-  if (offset !== maxX) {
-    offset -= carouselWidth;
-    carousel.style.transform = `translateX(${offset}px)`;
-  }
+const renderProjects = () => {
+  let projectNum = 1;
+  data.projects.map((project, index) => {
+    carousel.innerHTML += `
+    <div class="project-card project-${projectNum++} ${
+      index > 2 ? "hidden" : ""
+    }" data-name="${project.name}">
+    <figure>
+      <img
+        class="project-img"
+        src="${project.screenshot}"
+        alt="placeholder image"
+      />
+      <figcaption>${project.title}</figcaption>
+    </figure>
+    <div class="project-description-short">
+      ${project.shortDescription}
+    </div>
+    <button class="more-info-btn">MORE INFO &rarr;</button>
+  </div>
+`;
+  });
+
+  initPageDots();
 };
-const scrollProjectsLeft = e => {
-  slideNumber -= 1;
+
+const carouselScroll = e => {
+  switch (e.currentTarget.dataset.direction) {
+    case "right":
+      slideNumber += 1;
+      if (offset !== maxX) {
+        offset -= carouselWidth;
+      }
+      break;
+    case "left":
+      slideNumber -= 1;
+      if (offset !== 0) {
+        offset += carouselWidth;
+      }
+      break;
+    default:
+      return;
+  }
+  carousel.style.transform = `translateX(${offset}px)`;
+  updateCardVisibility();
   showOrHideArrowBtn();
   updatePageDots();
-  if (offset !== 0) {
-    offset += carouselWidth;
-    carousel.style.transform = `translateX(${offset}px)`;
+};
+const updateCardVisibility = () => {
+  const cards = document.querySelectorAll(".project-card");
+  cards.forEach(project => {
+    project.classList.add("hidden");
+  });
+  for (let i = 0; i < cardCount; i++) {
+    cards[slideNumber * 3 - 3] &&
+      document
+        .querySelectorAll(".project-card")
+        [slideNumber * 3 - 3].classList.remove("hidden");
+    cards[slideNumber * 3 - 2] &&
+      document
+        .querySelectorAll(".project-card")
+        [slideNumber * 3 - 2].classList.remove("hidden");
+    cards[slideNumber * 3 - 1] &&
+      document
+        .querySelectorAll(".project-card")
+        [slideNumber * 3 - 1].classList.remove("hidden");
   }
 };
 const showOrHideArrowBtn = () => {
@@ -163,13 +229,25 @@ const initPageDots = () => {
 };
 
 const openModal = e => {
+  clearModal();
   const project = e.currentTarget.offsetParent.dataset.name;
   populateModal(project);
   modal.classList.add("open");
 };
 
-const populateModal = project => {
-  let { demo, technologies, description, screenshot } = data.projects[project];
+const clearModal = () => {
+  technologiesContainerEl.innerHTML = "";
+  videoEl.innerHTML = "";
+  descriptionEl.innerHTML = "";
+};
+
+const populateModal = projectName => {
+  const index = data.projects.findIndex(project => {
+    return project.name === projectName;
+  });
+  let { demo, technologies, description, screenshot, gitHub } = data.projects[
+    index
+  ];
 
   // If a project video demo exists, add it, otherwise, use a screenshot
   demo
@@ -191,24 +269,29 @@ const populateModal = project => {
 
   // Append project description
   descriptionEl.textContent = description;
+
+  // Add GitHub link if necessary
+  gitHub &&
+    descriptionEl.insertAdjacentHTML(
+      "beforeend",
+      `<a class="github-link" href="${gitHub}" target="_blank"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>`
+    );
 };
 
 const closeModal = e => {
   if (e.target === e.currentTarget || e.currentTarget === closeModalBtn) {
-    technologiesContainerEl.innerHTML = "";
-    videoEl.innerHTML = "";
-    descriptionEl.innerHTML = "";
     modal.classList.remove("open");
   }
 };
 
-initPageDots();
+renderProjects();
 
 // ======== EVENTS ========
-navBtn.addEventListener("click", toggleNav);
-leftArrowBtn.addEventListener("click", scrollProjectsLeft);
-rightArrowBtn.addEventListener("click", scrollProjectsRight);
-moreInfoBtn.forEach(item => {
+elements.navBtn.addEventListener("click", toggleNav);
+arrowBtn.forEach(arrow => {
+  arrow.addEventListener("click", carouselScroll);
+});
+document.querySelectorAll(".more-info-btn").forEach(item => {
   item.addEventListener("click", openModal);
 });
 modal.addEventListener("click", closeModal);

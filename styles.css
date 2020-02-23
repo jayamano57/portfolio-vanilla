@@ -451,6 +451,10 @@ input:-webkit-autofill:active {
   border-radius: 4px;
 }
 
+.project-card.hidden {
+  visibility: hidden;
+}
+
 .project-1.project-card {
   background-color: #fff4dc;
   box-shadow: 0 0.5rem 2rem #525252;
@@ -837,14 +841,14 @@ fieldset {
   bottom: 1.5rem;
   right: 3rem;
   text-decoration: none;
-  color: var(--color-primary-dark);
+  color: black;
   display: flex;
   align-items: center;
   transition: color 0.2s;
 }
 
 .github-link:hover {
-  color: black;
+  color: var(--color-primary-dark);
 }
 
 .github-link i {

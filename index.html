@@ -102,7 +102,7 @@
         <h2 class="section-heading-light">PROJECTS</h2>
         <div class="projects-container">
           <div class="carousel">
-            <div class="project-card project-1" data-name="personal">
+            <!-- <div class="project-card project-1" data-name="personal">
               <figure>
                 <img
                   class="project-img"
@@ -157,10 +157,16 @@
                 A short description for Foodr goes here
               </div>
               <button class="more-info-btn">MORE INFO &rarr;</button>
-            </div>
+            </div> -->
           </div>
-          <button class="arrow-btn right-arrow-btn"></button>
-          <button class="arrow-btn left-arrow-btn"></button>
+          <button
+            class="arrow-btn right-arrow-btn"
+            data-direction="right"
+          ></button>
+          <button
+            class="arrow-btn left-arrow-btn"
+            data-direction="left"
+          ></button>
           <div class="page-dots"></div>
         </div>
       </section>
@@ -191,6 +197,7 @@
               </div>
               <div class="form-group group-message">
                 <textarea
+                  required
                   class="form-input message-input"
                   placeholder="Your message here..."
                   id="message"
@@ -237,16 +244,11 @@
           </div>
         </div>
         <div class="modal-details-wrapper">
+          <h2>DETAILS:</h2>
           <div class="modal-details">details</div>
-          <a
-            class="github-link"
-            href="https://github.com/jayamano57"
-            target="_blank"
-            ><i class="fab fa-github"></i> View on GitHub</a
-          >
         </div>
       </div>
     </div>
-    <script src="./index.js"></script>
+    <script src="./src/js/index.js" type="module"></script>
   </body>
 </html>
