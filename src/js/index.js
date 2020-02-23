@@ -1,19 +1,5 @@
 // ======== ELEMENTS ========
 import * as elements from "./elements.js";
-console.log(elements);
-const navBtn = document.querySelector(".navigation");
-const arrowBtn = document.querySelectorAll(".arrow-btn");
-const leftArrowBtn = document.querySelector(".left-arrow-btn");
-const rightArrowBtn = document.querySelector(".right-arrow-btn");
-const card = document.querySelector(".project-card");
-const carousel = document.querySelector(".carousel");
-const pageDotsContainer = document.querySelector(".page-dots");
-const modal = document.querySelector(".modal");
-const closeModalBtn = document.querySelector(".close-modal-btn");
-const videoEl = modal.querySelector(".video");
-const technologiesContainerEl = modal.querySelector(".modal-technologies");
-const descriptionEl = modal.querySelector(".modal-details");
-const navLink = document.querySelectorAll(".nav-link");
 
 // ======== DATA ========
 const data = {
@@ -90,7 +76,7 @@ const data = {
 // NAVIGATION
 
 const toggleNav = () => {
-  navBtn.classList.toggle("open");
+  elements.navBtn.classList.toggle("open");
 };
 
 const scrollToSection = e => {
@@ -126,7 +112,7 @@ const scrollToSection = e => {
 
 // PROJECTS
 
-const carouselWidth = carousel.offsetWidth;
+const carouselWidth = elements.carousel.offsetWidth;
 const cardCount = data.projects.length;
 const pageCount = Math.ceil(cardCount / 3);
 let slideNumber = 1;
@@ -136,7 +122,7 @@ const maxX = -(Math.floor(cardCount / 3) * carouselWidth);
 const renderProjects = () => {
   let projectNum = 1;
   data.projects.map((project, index) => {
-    carousel.innerHTML += `
+    elements.carousel.innerHTML += `
     <div class="project-card project-${projectNum++} ${
       index > 2 ? "hidden" : ""
     }" data-name="${project.name}">
@@ -176,7 +162,7 @@ const carouselScroll = e => {
     default:
       return;
   }
-  carousel.style.transform = `translateX(${offset}px)`;
+  elements.carousel.style.transform = `translateX(${offset}px)`;
   updateCardVisibility();
   showOrHideArrowBtn();
   updatePageDots();
@@ -203,42 +189,42 @@ const updateCardVisibility = () => {
 };
 const showOrHideArrowBtn = () => {
   if (slideNumber === pageCount) {
-    rightArrowBtn.style.visibility = "hidden";
-    leftArrowBtn.style.visibility = "visible";
+    elements.rightArrowBtn.style.visibility = "hidden";
+    elements.leftArrowBtn.style.visibility = "visible";
   } else if (slideNumber === 1) {
-    rightArrowBtn.style.visibility = "visible";
-    leftArrowBtn.style.visibility = "hidden";
+    elements.rightArrowBtn.style.visibility = "visible";
+    elements.leftArrowBtn.style.visibility = "hidden";
   } else {
-    rightArrowBtn.style.visibility = "visible";
-    leftArrowBtn.style.visibility = "visible";
+    elements.rightArrowBtn.style.visibility = "visible";
+    elements.leftArrowBtn.style.visibility = "visible";
   }
 };
 
 const updatePageDots = () => {
   for (let i = 0; i < pageCount; i++) {
-    pageDotsContainer.children[i].classList.remove("active");
+    elements.pageDotsContainer.children[i].classList.remove("active");
   }
-  pageDotsContainer.children[slideNumber - 1].classList.add("active");
+  elements.pageDotsContainer.children[slideNumber - 1].classList.add("active");
 };
 
 const initPageDots = () => {
   for (let i = 0; i < pageCount; i++) {
-    pageDotsContainer.innerHTML += "<span></span>";
+    elements.pageDotsContainer.innerHTML += "<span></span>";
   }
-  pageDotsContainer.children[0].classList.add("active");
+  elements.pageDotsContainer.children[0].classList.add("active");
 };
 
 const openModal = e => {
   clearModal();
   const project = e.currentTarget.offsetParent.dataset.name;
   populateModal(project);
-  modal.classList.add("open");
+  elements.modal.classList.add("open");
 };
 
 const clearModal = () => {
-  technologiesContainerEl.innerHTML = "";
-  videoEl.innerHTML = "";
-  descriptionEl.innerHTML = "";
+  elements.technologiesContainerEl.innerHTML = "";
+  elements.videoEl.innerHTML = "";
+  elements.descriptionEl.innerHTML = "";
 };
 
 const populateModal = projectName => {
@@ -251,14 +237,14 @@ const populateModal = projectName => {
 
   // If a project video demo exists, add it, otherwise, use a screenshot
   demo
-    ? (videoEl.innerHTML = `<iframe 
+    ? (elements.videoEl.innerHTML = `<iframe 
   src="${demo}">
   </iframe>`)
-    : (videoEl.style.cssText = `background-image: url("${screenshot}"); background-size: cover`);
+    : (elements.videoEl.style.cssText = `background-image: url("${screenshot}"); background-size: cover`);
 
   // Append technology icons
   technologies.forEach(technology => {
-    technologiesContainerEl.innerHTML += `<div class="technology" data-tech-name="${
+    elements.technologiesContainerEl.innerHTML += `<div class="technology" data-tech-name="${
       technology.name
     }">${
       technology.url
@@ -268,19 +254,22 @@ const populateModal = projectName => {
   });
 
   // Append project description
-  descriptionEl.textContent = description;
+  elements.descriptionEl.textContent = description;
 
   // Add GitHub link if necessary
   gitHub &&
-    descriptionEl.insertAdjacentHTML(
+    elements.descriptionEl.insertAdjacentHTML(
       "beforeend",
       `<a class="github-link" href="${gitHub}" target="_blank"><i class="fab fa-github" aria-hidden="true"></i> View on GitHub</a>`
     );
 };
 
 const closeModal = e => {
-  if (e.target === e.currentTarget || e.currentTarget === closeModalBtn) {
-    modal.classList.remove("open");
+  if (
+    e.target === e.currentTarget ||
+    e.currentTarget === elements.closeModalBtn
+  ) {
+    elements.modal.classList.remove("open");
   }
 };
 
@@ -288,14 +277,14 @@ renderProjects();
 
 // ======== EVENTS ========
 elements.navBtn.addEventListener("click", toggleNav);
-arrowBtn.forEach(arrow => {
+elements.arrowBtn.forEach(arrow => {
   arrow.addEventListener("click", carouselScroll);
 });
 document.querySelectorAll(".more-info-btn").forEach(item => {
   item.addEventListener("click", openModal);
 });
-modal.addEventListener("click", closeModal);
-closeModalBtn.addEventListener("click", closeModal);
-navLink.forEach(item => {
+elements.modal.addEventListener("click", closeModal);
+elements.closeModalBtn.addEventListener("click", closeModal);
+elements.navLink.forEach(item => {
   item.addEventListener("click", scrollToSection);
 });
