@@ -1,10 +1,18 @@
-import { navBtn, arrowBtn, modal, closeModalBtn, navLink } from "./elements.js";
+import {
+  navBtn,
+  arrowBtn,
+  modal,
+  closeModalBtn,
+  navLink,
+  sendContactBtn
+} from "./elements.js";
 import { toggleNav, scrollToSection } from "./components/navigation.js";
 import {
   carouselScroll,
   openModal,
   closeModal
 } from "./components/projects.js";
+import { sendMessage } from "./components/contact.js";
 
 navBtn.addEventListener("click", toggleNav);
 arrowBtn.forEach(arrow => {
@@ -18,3 +26,4 @@ navLink.forEach(item => {
 document.querySelectorAll(".more-info-btn").forEach(item => {
   item.addEventListener("click", openModal);
 });
+sendContactBtn.addEventListener("click", sendMessage);

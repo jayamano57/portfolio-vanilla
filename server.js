@@ -3,11 +3,15 @@ const app = express();
 const port = process.env.PORT || 8080;
 const bodyParser = require("body-parser");
 const nodemailer = require("nodemailer");
+var cors = require("cors");
 require("dotenv").config();
 
 app.listen(port, () => {
   console.log(`running on port: ${port}`);
 });
+
+app.use(cors());
+app.options("*", cors());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -24,7 +28,7 @@ app.post("/api/mailer", function(req, res) {
   const mailOptions = {
     from: process.env.NODE_EMAIL,
     to: process.env.NODE_EMAIL,
-    subject: "Mail from your portfolio site",
+    subject: `Portfoli Site Message - by ${req.body.name}`,
     text: req.body.message
   };
 

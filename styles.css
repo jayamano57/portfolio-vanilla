@@ -619,7 +619,31 @@ figcaption {
 }
 
 .group-name {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
+  position: relative;
+}
+
+.group-message {
+  position: relative;
+}
+
+.error-msg {
+  visibility: hidden;
+  position: absolute;
+  font-size: 1.2rem;
+  bottom: -10px;
+  right: 0;
+  display: inline-block;
+  background-color: white;
+  color: red;
+  border-radius: 3px;
+  box-shadow: 0 2px 4px dimgrey;
+  padding: 1px 4px;
+}
+
+.error-msg.visible {
+  visibility: visible;
+  animation: shake 0.25s;
 }
 
 .name-input {
@@ -628,11 +652,19 @@ figcaption {
   background-color: transparent;
 }
 
+.name-input.invalid {
+  border-bottom: 1px solid red;
+}
+
 .message-input {
   border: 1px solid white;
   background-color: transparent;
   line-height: 2.5rem;
   resize: none;
+}
+
+.message-input.invalid {
+  border: 1px solid red;
 }
 
 label {
@@ -669,7 +701,7 @@ label {
 
 fieldset {
   border: none;
-  padding: 4rem 0 2rem 0;
+  padding: 4rem 0 3.5rem 0;
 }
 
 .send-contact-btn {
@@ -698,6 +730,10 @@ fieldset {
 }
 .send-contact-btn:focus {
   outline: none;
+}
+.send-contact-btn:disabled {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .other-contact-mediums {
@@ -909,6 +945,52 @@ fieldset {
   margin-right: 2rem;
 }
 
+.alert {
+  width: 30rem;
+  position: fixed;
+  height: 7rem;
+  bottom: 1rem;
+  padding: 1rem 1rem;
+  left: 1rem;
+  background-color: white;
+  border-radius: 0.4rem;
+  border-left: 1rem solid #32ef2f;
+  z-index: 100000;
+  box-shadow: 0 1px 0.8rem #7c7c7c;
+  display: flex;
+  flex-direction: column;
+  animation: fadeInLeft 0.5s;
+}
+
+.alert.removing {
+  animation: fadeOutLeft 0.5s;
+  animation-fill-mode: forwards;
+}
+
+.alert-header {
+  display: flex;
+  align-items: center;
+}
+
+.alert-header i {
+  font-size: 2rem;
+  color: #32ef2f;
+}
+
+.alert-header span {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-left: 0.5rem;
+}
+
+.alert-msg {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
 /* ANIMATIONS */
 @keyframes fadeInLeft {
   0% {
@@ -918,6 +1000,16 @@ fieldset {
   100% {
     transform: translateX(0);
     opacity: 1;
+  }
+}
+@keyframes fadeOutLeft {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-3rem);
+    opacity: 0;
   }
 }
 @keyframes fadeInRight {
@@ -936,6 +1028,20 @@ fieldset {
   }
   50% {
     transform: translateX(0.5rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(1rem);
+  }
+  75% {
+    transform: translateX(-1rem);
   }
   100% {
     transform: translateX(0);

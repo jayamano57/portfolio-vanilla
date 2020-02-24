@@ -194,6 +194,9 @@
                   required
                 />
                 <label for="name">Your name...</label>
+                <span class="error-msg name-error-msg"
+                  >This field is required</span
+                >
               </div>
               <div class="form-group group-message">
                 <textarea
@@ -204,6 +207,9 @@
                   rows="10"
                 ></textarea>
                 <label for="message">Your message here...</label>
+                <span class="error-msg message-error-msg"
+                  >This field is required</span
+                >
               </div>
             </fieldset>
             <button class="send-contact-btn" type="submit">Send</button>
@@ -249,6 +255,6 @@
         </div>
       </div>
     </div>
-    <script src="./src/js/index.js"></script>
+    <script src="./src/js/index.js" type="module"></script>
   </body>
 </html>
