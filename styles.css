@@ -948,18 +948,33 @@ fieldset {
 .alert {
   width: 30rem;
   position: fixed;
-  height: 7rem;
   bottom: 1rem;
   padding: 1rem 1rem;
   left: 1rem;
   background-color: white;
   border-radius: 0.4rem;
-  border-left: 1rem solid #32ef2f;
+
   z-index: 100000;
   box-shadow: 0 1px 0.8rem #7c7c7c;
   display: flex;
   flex-direction: column;
   animation: fadeInLeft 0.5s;
+}
+
+[data-status="success"] {
+  border-left: 1rem solid #32ef2f;
+}
+
+[data-status="success"] i {
+  color: #32ef2f;
+}
+
+[data-status="error"] {
+  border-left: 1rem solid hsl(0, 86%, 56%);
+}
+
+[data-status="error"] i {
+  color: hsl(0, 86%, 56%);
 }
 
 .alert.removing {
@@ -974,7 +989,6 @@ fieldset {
 
 .alert-header i {
   font-size: 2rem;
-  color: #32ef2f;
 }
 
 .alert-header span {

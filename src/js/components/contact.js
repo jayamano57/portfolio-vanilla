@@ -25,13 +25,18 @@ export const sendMessage = e => {
       })
     })
       .then(() => {
-        showAlert();
+        showAlert(
+          "success",
+          "Message has been sent. I'll try and get back to you as soon possible. Thanks!"
+        );
         document.querySelector(".contact-form-form").reset();
         sendContactBtn.disabled = false;
       })
       .catch(error => {
-        showAlert("error", error);
-        console.log(`error: ${error}`);
+        showAlert(
+          "error",
+          "Something went wrong. Please try again or use one of the contact links to reach me!"
+        );
         sendContactBtn.disabled = false;
       });
   } else {
@@ -62,28 +67,27 @@ const showOrHideValidationError = () => {
 };
 
 const showAlert = (status, message) => {
-  debugger;
   let iconClass;
   let alertStatus;
   let alertMessage;
   if (status === "success") {
     iconClass = "fa-check-circle";
     alertStatus = "Success";
-    alertMessage = "Message has been sent";
-  } else if (status === "fail") {
+    alertMessage = message || "Message has been sent";
+  } else if (status === "error") {
     iconClass = "fa-times-circle";
     alertStatus = "Error";
-    alertMessage = "An error has occured";
+    alertMessage = message || "An error has occured";
   }
   const alertDiv = document.createElement("div");
   alertDiv.classList.add("alert");
-  alertDiv.innerHTML =
-    "<div class='alert-header'><i class='fas fa-check-circle'></i><span>Success</span></div><div class='alert-msg'>Here goes the message</div>";
+  alertDiv.dataset.status = status;
+  alertDiv.innerHTML = `<div class='alert-header'><i class='fas ${iconClass}'></i><span>${alertStatus}</span></div><div class='alert-msg'>${alertMessage}</div>`;
   document.querySelector("body").appendChild(alertDiv);
   setTimeout(function() {
     alertDiv.classList.add("removing");
-  }, 4000);
+  }, 8000);
   setTimeout(function() {
     alertDiv.remove();
-  }, 4500);
+  }, 8500);
 };

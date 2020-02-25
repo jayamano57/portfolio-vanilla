@@ -16,12 +16,12 @@ To-do
 
 - live link?
 - validation *
-- accessibility?
 - modularize / html templates? *
+- accessibility?
 - refactor show and hide arrows function
 - responsive
-- email node
-- put password and email in .env
+- email node *
+- put password and email in .env *
 - webpack
 - cross browser
 
