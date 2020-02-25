@@ -281,14 +281,14 @@ input:-webkit-autofill:active {
 /* ABOUT ME */
 .about-me {
   background-color: #fff4dc;
-  padding: 20rem 0 30rem;
+  padding: 25rem 0 35rem;
   margin-top: -20vh;
 }
 
 .about-me-content {
   display: flex;
   justify-content: space-around;
-  height: 40rem;
+  /* height: 40rem; */
   padding: 0 5rem;
 }
 .about-me-blurb {
@@ -391,7 +391,7 @@ input:-webkit-autofill:active {
 
 .arrow-and-page-dots-group {
   position: absolute;
-  bottom: 0;
+  bottom: 0.4rem;
   right: 50%;
   transform: translateX(50%);
   display: flex;
@@ -1034,6 +1034,14 @@ fieldset {
 
 /* 1240px */
 @media only screen and (max-width: 77.5em) {
+  .projects {
+    padding: 16rem 0;
+  }
+
+  .projects-container {
+    height: 45rem;
+  }
+
   .project-card {
     height: 30rem;
     min-width: calc(33.3333% - 8rem);
@@ -1049,7 +1057,7 @@ fieldset {
   }
 
   .arrow-and-page-dots-group {
-    bottom: 3rem;
+    bottom: 1rem;
   }
   /* .carousel {
     padding: 0;
@@ -1062,7 +1070,7 @@ fieldset {
   } */
 }
 
-/* 900px */
+/* 980px */
 @media only screen and (max-width: 56.25em) {
   body {
     padding: 0;
@@ -1129,7 +1137,10 @@ fieldset {
 }
 
 /* 750px */
-@media only screen and (max-width: 46.875em) {
+@media only screen and (max-width: 48.5em) {
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
   .section-heading {
     font-size: 6rem;
   }
@@ -1171,10 +1182,11 @@ fieldset {
   }
 }
 
+/* 600px */
 @media only screen and (max-width: 37.5em) {
-  .header {
+  /* .header {
     clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
-  }
+  } */
 
   .title-box-name {
     line-height: 8rem;
@@ -1191,6 +1203,23 @@ fieldset {
     height: 1px;
   }
 
+  .about-me-img-gallery > * {
+    width: 50%;
+  }
+
+  .about-me-img-1 {
+    top: 9rem;
+    left: -6rem;
+  }
+  .about-me-img-2 {
+    top: 9rem;
+    right: -6rem;
+  }
+  .about-me-img-3 {
+    top: 6rem;
+    left: 24%;
+  }
+
   .project-card {
     height: 50rem;
   }
@@ -1204,12 +1233,32 @@ fieldset {
   }
 }
 
+/* 440px */
 @media only screen and (max-width: 27.5em) {
   .about-me {
-    padding-bottom: 60rem;
+    padding-bottom: 50rem;
   }
   .project-card {
     width: 100%;
+  }
+  .about-me-img-gallery {
+    margin-top: 3rem;
+  }
+  .about-me-img-gallery > * {
+    width: 60%;
+  }
+
+  .about-me-img-1 {
+    top: 9rem;
+    left: -6rem;
+  }
+  .about-me-img-2 {
+    top: 9rem;
+    right: -6rem;
+  }
+  .about-me-img-3 {
+    top: 4rem;
+    left: 21%;
   }
 }
 
