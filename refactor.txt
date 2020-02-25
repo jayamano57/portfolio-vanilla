@@ -13,12 +13,18 @@
 To-do
 - go step-by-step and add in modules
 =======
+Responsive:
+1. fonts
+2. paddings for sections
+3. modal
+
+=======
 
 - live link?
 - validation *
 - modularize / html templates? *
 - accessibility?
-- refactor show and hide arrows function
+- refactor show and hide arrows function *
 - responsive
 - email node *
 - put password and email in .env *

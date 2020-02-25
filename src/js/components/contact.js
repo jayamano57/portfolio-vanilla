@@ -27,7 +27,8 @@ export const sendMessage = e => {
       .then(() => {
         showAlert(
           "success",
-          "Message has been sent. I'll try and get back to you as soon possible. Thanks!"
+          "Message has been sent. I'll try and get back to you as soon possible. Thanks!",
+          8
         );
         document.querySelector(".contact-form-form").reset();
         sendContactBtn.disabled = false;
@@ -35,7 +36,8 @@ export const sendMessage = e => {
       .catch(error => {
         showAlert(
           "error",
-          "Something went wrong. Please try again or use one of the contact links to reach me!"
+          "Something went wrong. Please try again or use one of the contact links to reach me!",
+          8
         );
         sendContactBtn.disabled = false;
       });
@@ -66,7 +68,7 @@ const showOrHideValidationError = () => {
   }
 };
 
-const showAlert = (status, message) => {
+const showAlert = (status, message, seconds) => {
   let iconClass;
   let alertStatus;
   let alertMessage;
@@ -86,8 +88,8 @@ const showAlert = (status, message) => {
   document.querySelector("body").appendChild(alertDiv);
   setTimeout(function() {
     alertDiv.classList.add("removing");
-  }, 8000);
+  }, seconds * 1000);
   setTimeout(function() {
     alertDiv.remove();
-  }, 8500);
+  }, seconds * 1500);
 };

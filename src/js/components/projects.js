@@ -23,9 +23,9 @@ export const renderProjects = () => {
   let projectNum = 1;
   data.projects.map((project, index) => {
     carousel.innerHTML += `
-    <div class="project-card project-${projectNum++} ${
-      index > 2 ? "hidden" : ""
-    }" data-name="${project.name}">
+    <div class="project-card project-${projectNum++}" data-name="${
+      project.name
+    }">
     <figure>
       <img
         class="project-img"
@@ -40,6 +40,10 @@ export const renderProjects = () => {
     <button class="more-info-btn">MORE INFO &rarr;</button>
   </div>
 `;
+    index > 2 &&
+      (carousel.querySelector(
+        `[data-name="${project.name}"]`
+      ).style.visibility = "hidden");
   });
 
   initPageDots();
@@ -71,21 +75,21 @@ export const carouselScroll = e => {
 export const updateCardVisibility = () => {
   const cards = document.querySelectorAll(".project-card");
   cards.forEach(project => {
-    project.classList.add("hidden");
+    project.style.visibility = "hidden";
   });
   for (let i = 0; i < cardCount; i++) {
     cards[slideNumber * 3 - 3] &&
-      document
-        .querySelectorAll(".project-card")
-        [slideNumber * 3 - 3].classList.remove("hidden");
+      (document.querySelectorAll(".project-card")[
+        slideNumber * 3 - 3
+      ].style.visibility = "visible");
     cards[slideNumber * 3 - 2] &&
-      document
-        .querySelectorAll(".project-card")
-        [slideNumber * 3 - 2].classList.remove("hidden");
+      (document.querySelectorAll(".project-card")[
+        slideNumber * 3 - 2
+      ].style.visibility = "visible");
     cards[slideNumber * 3 - 1] &&
-      document
-        .querySelectorAll(".project-card")
-        [slideNumber * 3 - 1].classList.remove("hidden");
+      (document.querySelectorAll(".project-card")[
+        slideNumber * 3 - 1
+      ].style.visibility = "visible");
   }
 };
 
