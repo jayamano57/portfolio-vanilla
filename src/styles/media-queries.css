@@ -1,0 +1,403 @@
+/* 1240px */
+@media only screen and (max-width: 77.5em) {
+  .projects {
+    padding: 16rem 0;
+  }
+  .projects-container {
+    height: 45rem;
+  }
+  .project-card {
+    height: 30rem;
+    min-width: calc(33.3333% - 8rem);
+    margin: 0px 4rem;
+  }
+  .project-description-short {
+    font-size: 1.3rem;
+  }
+  .more-info-btn {
+    font-size: 1rem;
+  }
+  .arrow-and-page-dots-group {
+    bottom: 1rem;
+  }
+  .technology {
+    height: 4rem;
+  }
+  .contact-list li a {
+    font-size: 1.6rem;
+  }
+}
+
+/* 980px */
+@media only screen and (max-width: 61.25em) {
+  body {
+    padding: 0;
+  }
+  .nav-btn {
+    right: 3rem;
+    top: 3rem;
+  }
+  .nav-btn,
+  .nav-background {
+    right: 3rem;
+    top: 3rem;
+    height: 5rem;
+    width: 5rem;
+  }
+  .nav-icon,
+  .nav-icon::before,
+  .nav-icon::after {
+    width: 2.5rem;
+    height: 1.5px;
+  }
+  .about-me-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: inherit;
+  }
+  .about-me {
+    padding: 20rem 0 55rem;
+  }
+  .about-me-blurb {
+    width: 100%;
+    padding-right: 0;
+  }
+  .about-me-img-gallery {
+    width: 75%;
+  }
+  .about-me-img-gallery > * {
+    width: 40%;
+  }
+  .about-me-img-1 {
+    top: 9rem;
+    left: -2rem;
+  }
+  .about-me-img-2 {
+    top: 9rem;
+    right: -2rem;
+  }
+  .about-me-img-3 {
+    top: 6rem;
+    left: 30%;
+  }
+  .project-card {
+    min-width: calc(33.3333% - 4rem);
+    margin: 0px 2rem;
+  }
+  .arrow-and-page-dots-group {
+    width: 20%;
+  }
+  .modal-content {
+    width: 90%;
+  }
+  .technology {
+    height: 2.5rem;
+  }
+  .technology:not(:last-child) {
+    margin-right: 1.5rem;
+  }
+  .contact-container {
+    flex-direction: column;
+    width: 70%;
+  }
+  .contact-form-form {
+    box-shadow: 0px 2px 5px var(--color-box-shadow-1);
+    clip-path: none;
+    height: 75%;
+    padding: 3rem 5rem;
+    background-color: var(--color-primar-dark-opacity-2);
+    width: 100%;
+  }
+  .group-name {
+    margin-bottom: 3rem;
+  }
+  .name-input + label {
+    transform: translateY(-6.5rem);
+  }
+  .message-input + label {
+    transform: translateY(-21rem);
+  }
+  fieldset {
+    width: 100%;
+    margin-top: 2rem;
+    padding: 0rem 0 0.8rem 0;
+  }
+  .group-message {
+    height: 17rem;
+  }
+  .message-input {
+    height: 100%;
+  }
+  .message-input:placeholder-shown + label {
+    transform: translateY(-17rem);
+  }
+  .send-contact-btn {
+    margin-top: 2rem;
+    height: 3rem;
+    width: 7rem;
+    font-size: 1.2rem;
+  }
+  .other-contact-mediums {
+    height: 25%;
+    margin-left: 4rem;
+    margin-right: auto;
+    padding-right: 0;
+    margin-top: auto;
+  }
+  .contact-list li a {
+    font-size: 1.3rem;
+  }
+  .contact-list li:not(:last-child) {
+    margin: 0;
+  }
+  .contact-list li a i {
+    font-size: 2rem;
+  }
+}
+
+/* 784px */
+@media only screen and (max-width: 49em) {
+  .header {
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
+  .section-heading {
+    font-size: 6rem;
+  }
+  .projects .section-heading {
+    margin-bottom: 8rem;
+  }
+  .projects-container {
+    height: 100%;
+    overflow: visible;
+  }
+  .carousel {
+    flex-direction: column;
+  }
+  .project-card {
+    visibility: visible !important;
+    width: 80%;
+    height: 70rem;
+  }
+  .project-card:not(:last-child) {
+    margin-bottom: 8rem;
+  }
+  .project-description-short {
+    font-size: 2.2rem;
+    padding: 4rem 3rem;
+  }
+  .more-info-btn {
+    font-size: 1.6rem;
+  }
+  .arrow-and-page-dots-group {
+    display: none;
+  }
+  .modal-details-wrapper h2 {
+    font-size: 1.2rem;
+  }
+  .modal-content {
+    height: 60rem;
+    width: 75%;
+    flex-direction: column;
+  }
+  .modal-details {
+    font-size: 0.8rem;
+  }
+  .modal-details-wrapper {
+    padding: 1.5rem;
+    flex: 1;
+    width: 100%;
+  }
+  .github-link {
+    font-size: 0.8rem;
+  }
+  .github-link i {
+    font-size: 1rem;
+  }
+  .close-modal-btn {
+    color: white;
+  }
+  .demo {
+    width: 100%;
+  }
+  .video {
+    height: 20rem;
+  }
+  .technology {
+    height: 1.5rem;
+  }
+  .technology:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+  .technology-label {
+    font-size: 0.5rem;
+  }
+  .external-links {
+    padding: 1.5rem;
+  }
+  .external-links h3 {
+    font-size: 0.5rem;
+  }
+  .contact-heading {
+    font-size: 4.5rem;
+  }
+  .group-name {
+    margin-bottom: 5rem;
+  }
+  .send-contact-btn {
+    bottom: 3rem;
+    height: 2.5rem;
+    width: 6rem;
+    font-size: 1rem;
+  }
+}
+
+/* 600px */
+@media only screen and (max-width: 37.5em) {
+  .title-box-name {
+    line-height: 8rem;
+  }
+  .nav-btn,
+  .nav-background {
+    right: 2rem;
+    top: 2rem;
+  }
+  .nav-icon,
+  .nav-icon::before,
+  .nav-icon::after {
+    height: 1px;
+  }
+  .about-me-img-gallery > * {
+    width: 50%;
+  }
+  .about-me-img-1 {
+    top: 9rem;
+    left: -6rem;
+  }
+  .about-me-img-2 {
+    top: 9rem;
+    right: -6rem;
+  }
+  .about-me-img-3 {
+    top: 6rem;
+    left: 24%;
+  }
+  .project-card {
+    height: 50rem;
+  }
+  .project-description-short {
+    font-size: 1.8rem;
+  }
+  .more-info-btn {
+    font-size: 1.2rem;
+  }
+  .modal-details-wrapper h2 {
+    font-size: 1rem;
+  }
+  .modal-technologies {
+    margin-top: 0.5rem;
+    padding: 1rem 1rem 0 1rem;
+  }
+  .contact-container {
+    height: 55rem;
+  }
+  .contact-form {
+    padding: 25rem 0 10rem 0;
+    margin-top: -20vh;
+  }
+  .contact-form-form {
+    padding: 2rem;
+  }
+  .contact-heading {
+    font-size: 2.8rem;
+  }
+  .form-group label {
+    font-size: 1rem;
+  }
+  .group-name {
+    margin-bottom: 5rem;
+  }
+  .group-message {
+    height: 12rem;
+  }
+  .name-input + label {
+    transform: translateY(-5.5rem);
+  }
+  .message-input + label {
+    transform: translateY(-15rem);
+  }
+  .message-input:placeholder-shown + label {
+    transform: translateY(-11.5rem);
+  }
+  .send-contact-btn {
+    bottom: 3rem;
+  }
+}
+
+/* 440px */
+@media only screen and (max-width: 27.5em) {
+  .about-me {
+    padding-bottom: 50rem;
+  }
+  .about-me-img-gallery {
+    margin-top: 3rem;
+  }
+  .about-me-img-gallery > * {
+    width: 60%;
+  }
+  .about-me-img-1 {
+    top: 9rem;
+    left: -6rem;
+  }
+  .about-me-img-2 {
+    top: 9rem;
+    right: -6rem;
+  }
+  .about-me-img-3 {
+    top: 4rem;
+    left: 21%;
+  }
+  .project-card {
+    width: 100%;
+  }
+  .modal-content {
+    width: 90%;
+  }
+  .video {
+    height: 20rem;
+  }
+  .modal-technologies {
+    justify-content: center;
+  }
+  .contact-container {
+    height: 50rem;
+    width: 90%;
+  }
+  .group-name {
+    margin-bottom: 3.5rem;
+  }
+  .form-input {
+    font-size: 1rem;
+  }
+  .send-contact-btn {
+    margin: 0;
+    bottom: 2rem;
+    height: 2.5rem;
+    width: 5rem;
+    font-size: 1rem;
+  }
+  .contact-list li a {
+    font-size: 1rem;
+  }
+  .contact-list li a i {
+    font-size: 1.5rem;
+  }
+  .error-msg {
+    font-size: 1rem;
+  }
+  .message-input:placeholder-shown + label {
+    transform: translateY(-11.5rem);
+  }
+  .message-error-msg {
+    bottom: -2.7rem;
+  }
+}

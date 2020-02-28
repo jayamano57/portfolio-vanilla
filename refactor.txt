@@ -14,9 +14,12 @@ To-do
 - go step-by-step and add in modules
 =======
 Responsive:
-1. fonts
-2. paddings for sections
-3. modal
+3. test responsive
+2. loading state for button
+4. refactor (js -> html -> css)
+5. populate data 
+5. cross browser compatibility
+6. webpack
 
 =======
 

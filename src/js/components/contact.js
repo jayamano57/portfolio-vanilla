@@ -51,6 +51,7 @@ const validationChecker = (name, message) => {
   return name && message;
 };
 
+// message when there is a validation error
 const showOrHideValidationError = () => {
   if (nameInput.value) {
     nameInput.classList.remove("invalid");
@@ -68,6 +69,7 @@ const showOrHideValidationError = () => {
   }
 };
 
+//custom toaster
 const showAlert = (status, message, seconds) => {
   let iconClass;
   let alertStatus;
