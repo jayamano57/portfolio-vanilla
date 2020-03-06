@@ -9,8 +9,14 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
+  target: "node",
+  entry: { server: "./server.js", main: "./src/js/index.js" },
   output: {
-    filename: "[name].[contentHash].bundle.js",
+    filename: data => {
+      return data.chunk.name === "server"
+        ? "[name].min.js"
+        : "[name].[contentHash].bundle.js";
+    },
     path: path.resolve(__dirname, "dist")
   },
   optimization: {

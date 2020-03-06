@@ -1,4 +1,5 @@
 const express = require("express");
+const path = require("path");
 const app = express();
 const port = process.env.PORT || 8080;
 const bodyParser = require("body-parser");
@@ -8,6 +9,10 @@ require("dotenv").config();
 
 app.listen(port, () => {
   console.log(`running on port: ${port}`);
+});
+
+app.get("/*", function(req, res) {
+  res.sendFile(path.join(__dirname + "/dist/index.html"));
 });
 
 app.use(cors());

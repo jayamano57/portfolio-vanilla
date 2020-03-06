@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "development",
+  entry: { main: "./src/js/index.js" },
   output: {
     filename: "[name].bundle.js",
     path: path.resolve(__dirname, "dist")
