@@ -66,7 +66,7 @@ export const carouselScroll = e => {
     default:
       return;
   }
-  carousel.style.transform = `translateX(${offset}px)`;
+  carousel.style.transform = `translateX(${offset}px)`; //rn is -1389 but should be 1280
   updateCardVisibility();
   showOrHideArrowBtn();
   updatePageDots();

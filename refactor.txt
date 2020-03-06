@@ -28,7 +28,7 @@ Responsive:
 - modularize / html templates? *
 - accessibility?
 - refactor show and hide arrows function *
-- responsive
+- responsive*
 - email node *
 - put password and email in .env *
 - webpack
