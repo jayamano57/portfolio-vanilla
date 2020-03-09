@@ -22,17 +22,11 @@ Responsive:
 6. webpack
 
 =======
-
-- live link?
-- validation *
-- modularize / html templates? *
+- import statements in data
 - accessibility?
-- refactor show and hide arrows function *
-- responsive*
-- email node *
-- put password and email in .env *
-- webpack
 - cross browser
+- file in data
+- DEPLOY
 
 
 ======= backlog

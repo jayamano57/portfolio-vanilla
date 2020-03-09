@@ -11,6 +11,9 @@ module.exports = merge(common, {
   mode: "production",
   target: "node",
   entry: { server: "./server.js", main: "./src/js/index.js" },
+  node: {
+    __dirname: false
+  },
   output: {
     filename: data => {
       return data.chunk.name === "server"

@@ -3,10 +3,15 @@ module.exports = {
     rules: [
       {
         test: /\.html$/,
-        use: ["html-loader"]
+        use: {
+          loader: "html-loader",
+          options: {
+            attrs: [":src"]
+          }
+        }
       },
       {
-        test: /\.(svg|png|jpg|gif)$/,
+        test: /\.(svg|png|jpg|mp4|gif)$/,
         use: {
           loader: "file-loader",
           options: {

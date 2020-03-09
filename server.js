@@ -7,12 +7,16 @@ const nodemailer = require("nodemailer");
 var cors = require("cors");
 require("dotenv").config();
 
+const staticAssetsPath = path.resolve(__dirname);
+app.use(express.static(staticAssetsPath));
+
 app.listen(port, () => {
   console.log(`running on port: ${port}`);
+  console.log(path.join(__dirname, "/index.html"));
 });
 
 app.get("/*", function(req, res) {
-  res.sendFile(path.join(__dirname + "/dist/index.html"));
+  res.sendFile(path.join(__dirname, "/index.html")); //send the index.html. maybe check the other apps
 });
 
 app.use(cors());
