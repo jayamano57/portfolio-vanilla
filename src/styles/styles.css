@@ -549,6 +549,7 @@ figcaption {
   box-shadow: 0 1rem 3rem var(--color-box-shadow-1);
 }
 .form-input {
+  border-radius: 0;
   display: block;
   font-size: 1.5rem;
   width: 100%;

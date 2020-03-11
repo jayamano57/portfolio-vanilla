@@ -23,7 +23,8 @@ Responsive:
 
 =======
 - font awesome requests clean up
-- css media query on mobile
+- toastr on top;
+input border-radius
 
 
 ======= backlog
