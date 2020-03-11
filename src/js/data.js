@@ -1,4 +1,4 @@
-import personalSiteImg from "../media/personal-site.png";
+import { personalSiteImg } from "../media/personal-site.png";
 import htmlCssJsImg from "../media/html-css-js.png";
 import nodejsImg from "../media/nodejs.png";
 import expressjsImg from "../media/expressjs-icon.png";
