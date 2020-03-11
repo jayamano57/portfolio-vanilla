@@ -1,4 +1,18 @@
 import personalSiteImg from "../media/personal-site.png";
+import htmlCssJsImg from "../media/html-css-js.png";
+import nodejsImg from "../media/nodejs.png";
+import expressjsImg from "../media/expressjs-icon.png";
+import babelImg from "../media/babel.png";
+import webpackImg from "../media/webpack.png";
+import spLogo from "../media/sp-logo.png";
+import reactImg from "../media/React-01.png";
+import bootstrapImg from "../media/bootstrap.png";
+import mssqlImg from "../media/ms_sql.png";
+import placeholderImg from "../media/placeholder-img.png";
+import sassImg from "../media/sass.png";
+import materialUIImg from "../media/material-ui.png";
+import jqueryImg from "../media/jquery.png";
+import yelpImg from "../media/yelp.png";
 
 export const data = {
   projects: [
@@ -9,13 +23,13 @@ export const data = {
       screenshot: personalSiteImg,
       technologies: [
         {
-          url: require("../media/html-css-js.png"),
+          url: htmlCssJsImg,
           name: "html | js | css"
         },
-        { url: require("../media/nodejs.png"), name: "node.js" },
-        { url: require("../media/expressjs-icon.png"), name: "express.js" },
-        { url: require("../media/babel.png"), name: "babel" },
-        { url: require("../media/webpack.png"), name: "webpack" }
+        { url: nodejsImg, name: "node.js" },
+        { url: expressjsImg, name: "express.js" },
+        { url: babelImg, name: "babel" },
+        { url: webpackImg, name: "webpack" }
       ],
       shortDescription: "A short description for my personal site goes here",
       description: "personal site description",
@@ -25,13 +39,13 @@ export const data = {
       title: "Sellers Place",
       name: "sellers",
       demo: "https://www.youtube.com/embed/tgbNymZ7vqY",
-      screenshot: require("../media/sp-logo.png"),
+      screenshot: spLogo,
       technologies: [
-        { url: require("../media/React-01.png"), name: "React.js" },
-        { url: require("../media/bootstrap.png"), name: "Bootstrap" },
-        { url: require("../media/nodejs.png"), name: "node.js" },
-        { url: require("../media/expressjs-icon.png"), name: "express.js" },
-        { url: require("../media/ms_sql.png"), name: "sql server" }
+        { url: reactImg, name: "React.js" },
+        { url: bootstrapImg, name: "Bootstrap" },
+        { url: nodejsImg, name: "node.js" },
+        { url: expressjsImg, name: "express.js" },
+        { url: mssqlImg, name: "sql server" }
       ],
       shortDescription: "A short description for sellers place goes here",
       description: "sellers place description"
@@ -40,14 +54,14 @@ export const data = {
       title: "McMacro",
       name: "mcmacro",
       demo: "https://www.youtube.com/embed/tgbNymZ7vqY",
-      screenshot: require("../media/placeholder-img.png"),
+      screenshot: placeholderImg,
       technologies: [
-        { url: require("../media/React-01.png"), name: "React.js" },
-        { url: require("../media/sass.png"), name: "Sass" },
-        { url: require("../media/material-ui.png"), name: "Material UI" },
-        { url: require("../media/nodejs.png"), name: "node.js" },
-        { url: require("../media/expressjs-icon.png"), name: "express.js" },
-        { url: require("../media/jquery.png"), name: "jQuery" },
+        { url: reactImg, name: "React.js" },
+        { url: sassImg, name: "Sass" },
+        { url: materialUIImg, name: "Material UI" },
+        { url: nodejsImg, name: "node.js" },
+        { url: expressjsImg, name: "express.js" },
+        { url: jqueryImg, name: "jQuery" },
         { url: "", name: "Cheerio.js" }
       ],
       shortDescription: "A short description for McMacro goes here",
@@ -58,12 +72,12 @@ export const data = {
       title: "Foodr",
       name: "foodr",
       demo: "https://www.youtube.com/embed/tgbNymZ7vqY",
-      screenshot: require("../media/placeholder-img.png"),
+      screenshot: placeholderImg,
       technologies: [
-        { url: require("../media/React-01.png"), name: "React.js" },
-        { url: require("../media/nodejs.png"), name: "node.js" },
-        { url: require("../media/expressjs-icon.png"), name: "express.js" },
-        { url: require("../media/yelp.png"), name: "Yelp API" },
+        { url: reactImg, name: "React.js" },
+        { url: nodejsImg, name: "node.js" },
+        { url: expressjsImg, name: "express.js" },
+        { url: yelpImg, name: "Yelp API" },
         { url: "", name: "Material Kit" }
       ],
       shortDescription: "A short description for my foodr goes here",

@@ -212,6 +212,7 @@ input:-webkit-autofill:active {
 .header {
   height: 95vh;
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   background-image: linear-gradient(
       to right bottom,
       var(--color-primary-light-opacity),
@@ -285,7 +286,7 @@ input:-webkit-autofill:active {
 .about-me-img-gallery > * {
   position: absolute;
   width: 55%;
-  transition: all 0.1s;
+  transition: transform 0.1s;
 }
 .about-me-img-1 {
   top: 5rem;
@@ -294,6 +295,7 @@ input:-webkit-autofill:active {
 .about-me-img-1:hover {
   z-index: 1;
   transform: scale(1.1) translateY(-25px);
+  -webkit-transform: scale(1.1) translateY(-25px);
   outline: 4px solid var(--color-primary);
   outline-offset: 1rem;
 }
@@ -304,6 +306,7 @@ input:-webkit-autofill:active {
 .about-me-img-2:hover {
   z-index: 1;
   transform: scale(1.1) translateY(-55px);
+  -webkit-transform: scale(1.1) translateY(-55px);
   outline: 4px solid var(--color-primary);
   outline-offset: 1rem;
 }
@@ -314,6 +317,7 @@ input:-webkit-autofill:active {
 .about-me-img-3:hover {
   z-index: 1;
   transform: scale(1.1) translateY(-25px);
+  -webkit-transform: scale(1.1) translateY(-25px);
   outline: 4px solid var(--color-primary);
   outline-offset: 1rem;
 }
@@ -444,6 +448,7 @@ input:-webkit-autofill:active {
 figure {
   margin: 0.5rem 0.5rem 0 0.5rem;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
   border-radius: 4px;
   overflow: hidden;
   height: 55%;
@@ -528,6 +533,7 @@ figcaption {
   padding: 3rem 5rem;
   position: absolute;
   clip-path: polygon(0 0, 65% 0, 55% 100%, 0% 100%);
+  -webkit-clip-path: polygon(0 0, 65% 0, 55% 100%, 0% 100%);
   background-color: var(--color-primar-dark-opacity-2);
   width: 100%;
 }

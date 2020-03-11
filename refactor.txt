@@ -25,7 +25,6 @@ Responsive:
 - import statements in data
 - accessibility?
 - cross browser
-- file in data
 - DEPLOY
 
 
