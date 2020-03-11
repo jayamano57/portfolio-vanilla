@@ -22,10 +22,8 @@ Responsive:
 6. webpack
 
 =======
-- import statements in data
-- accessibility?
-- cross browser
-- DEPLOY
+- font awesome requests clean up
+- css media query on mobile
 
 
 ======= backlog

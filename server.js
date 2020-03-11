@@ -12,7 +12,6 @@ app.use(express.static(staticAssetsPath));
 
 app.listen(port, () => {
   console.log(`running on port: ${port}`);
-  console.log(path.join(__dirname, "/index.html"));
 });
 
 app.get("/*", function(req, res) {

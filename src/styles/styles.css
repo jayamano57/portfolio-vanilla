@@ -227,8 +227,8 @@ input:-webkit-autofill:active {
   position: absolute;
   top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   text-align: center;
 }
 .title-box > .title-box-name {
@@ -294,8 +294,8 @@ input:-webkit-autofill:active {
 }
 .about-me-img-1:hover {
   z-index: 1;
-  transform: scale(1.1) translateY(-25px);
-  -webkit-transform: scale(1.1) translateY(-25px);
+  transform: scale(1.1) translateY(-2.5rem);
+  -webkit-transform: scale(1.1) translateY(-2.5rem);
   outline: 4px solid var(--color-primary);
   outline-offset: 1rem;
 }
@@ -305,8 +305,8 @@ input:-webkit-autofill:active {
 }
 .about-me-img-2:hover {
   z-index: 1;
-  transform: scale(1.1) translateY(-55px);
-  -webkit-transform: scale(1.1) translateY(-55px);
+  transform: scale(1.1) translateY(-5.5rem);
+  -webkit-transform: scale(1.1) translateY(-5.5rem);
   outline: 4px solid var(--color-primary);
   outline-offset: 1rem;
 }
@@ -316,8 +316,8 @@ input:-webkit-autofill:active {
 }
 .about-me-img-3:hover {
   z-index: 1;
-  transform: scale(1.1) translateY(-25px);
-  -webkit-transform: scale(1.1) translateY(-25px);
+  transform: scale(1.1) translateY(-2.5rem);
+  -webkit-transform: scale(1.1) translateY(-2.5rem);
   outline: 4px solid var(--color-primary);
   outline-offset: 1rem;
 }
