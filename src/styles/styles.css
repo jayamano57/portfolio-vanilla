@@ -645,6 +645,7 @@ fieldset {
   font-size: 1.5rem;
   width: 12rem;
   border: none;
+  background-color: var(--color-primary-light-2);
   color: #5f594b;
   border-radius: 20px;
   transition: all 0.2s;
