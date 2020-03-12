@@ -1,6 +1,12 @@
 const Dotenv = require("dotenv-webpack");
 module.exports = {
-  plugins: [new Dotenv()],
+  plugins: [
+    new Dotenv({
+      path: path.resolve(__dirname, "./.env"),
+      safe: false,
+      silent: false
+    })
+  ],
   module: {
     rules: [
       {
