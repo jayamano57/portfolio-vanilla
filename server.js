@@ -12,7 +12,7 @@ app.use(express.static(staticAssetsPath));
 
 app.listen(port, () => {
   console.log(`running on port: ${port}`);
-  console.log(path.join(__dirname, "/index.html"));
+  console.log(`dotenv: ${process.env.NODE_EMAIL}`);
 });
 
 app.get("/*", function(req, res) {

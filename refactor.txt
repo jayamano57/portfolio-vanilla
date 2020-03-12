@@ -26,7 +26,7 @@ Responsive:
 - toastr on top;
 - nav background filter blur
 - hanldle current email
-- fix node mailer
+- fix node mailer: has to do with .env
 
 
 ======= backlog
