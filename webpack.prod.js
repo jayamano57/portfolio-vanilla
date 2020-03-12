@@ -62,8 +62,7 @@ const serverConfig = {
     filename: "[name].min.js"
   },
   node: {
-    __dirname: false,
-    child_process: "empty"
+    __dirname: false
   }
 };
 
