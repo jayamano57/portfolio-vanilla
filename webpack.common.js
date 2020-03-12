@@ -3,7 +3,7 @@ const path = require("path");
 module.exports = {
   plugins: [
     new Dotenv({
-      path: "../env",
+      path: "/env",
       safe: false,
       silent: false
     })
