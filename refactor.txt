@@ -24,7 +24,7 @@ Responsive:
 =======
 - font awesome requests clean up
 - toastr on top;
-input border-radius
+- nav background filter blur
 
 
 ======= backlog

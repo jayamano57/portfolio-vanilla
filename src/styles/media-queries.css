@@ -1,3 +1,12 @@
+@media only screen and (min-width: 96.5em) {
+  .projects-container {
+    height: 75rem;
+  }
+  .project-card {
+    height: 60rem;
+  }
+}
+
 /* 1240px */
 @media only screen and (max-width: 77.5em) {
   .projects {
