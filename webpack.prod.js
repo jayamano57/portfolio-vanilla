@@ -9,7 +9,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = merge(common, {
   mode: "production",
-  target: "web",
+  target: "node",
   entry: { server: "./server.js", main: "./src/js/index.js" },
   node: {
     __dirname: false
