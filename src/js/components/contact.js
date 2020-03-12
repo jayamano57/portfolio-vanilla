@@ -10,7 +10,7 @@ export const sendMessage = e => {
   const name = nameInput.value;
   const message = messageInput.value;
   const url = "http://www.jayamano.com/api/mailer";
-  // const url = "http://localhost:8080/api/mailer"
+  // const url = "http://localhost:8080/api/mailer";
   e.preventDefault();
   sendContactBtn.disabled = true;
   const isValid = validationChecker(name, message);

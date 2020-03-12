@@ -25,6 +25,8 @@ Responsive:
 - font awesome requests clean up
 - toastr on top;
 - nav background filter blur
+- hanldle current email
+- fix node mailer
 
 
 ======= backlog
