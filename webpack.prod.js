@@ -53,6 +53,7 @@ const clientConfig = merge(common, {
   }
 });
 const serverConfig = {
+  mode: "production",
   target: "node",
   entry: { server: "./server.js" },
   output: {
