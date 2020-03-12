@@ -31,7 +31,12 @@ const clientConfig = merge(common, {
   },
   plugins: [
     new MiniCssExtractPlugin({ filename: "[name].[contentHash].css" }),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
+    new Dotenv({
+      path: path.resolve(__dirname, ".env"),
+      safe: false,
+      silent: false
+    })
   ],
   module: {
     rules: [
