@@ -12,6 +12,7 @@ app.use(express.static(staticAssetsPath));
 
 app.listen(port, () => {
   console.log(`running on port: ${port}`);
+  console.log(path.join(__dirname, "/index.html"));
 });
 
 app.get("/*", function(req, res) {
@@ -28,14 +29,14 @@ app.post("/api/mailer", function(req, res) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: "jayamano57@gmail.com",
-      pass: "vzxmfiknqticpsxa"
+      user: process.env.NODE_EMAIL,
+      pass: process.env.NODE_PASS
     }
   });
 
   const mailOptions = {
-    from: "jayamano57@gmail.com",
-    to: "jayamano57@gmail.com",
+    from: process.env.NODE_EMAIL,
+    to: process.env.NODE_EMAIL,
     subject: `Portfoli Site Message - by ${req.body.name}`,
     text: req.body.message
   };
