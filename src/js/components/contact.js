@@ -9,12 +9,14 @@ import {
 export const sendMessage = e => {
   const name = nameInput.value;
   const message = messageInput.value;
+  const url = "http://jayamano.com/api/mailer";
+  // const url = "http://localhost:8080/api/mailer"
   e.preventDefault();
   sendContactBtn.disabled = true;
   const isValid = validationChecker(name, message);
   if (isValid) {
     showOrHideValidationError();
-    fetch("http://localhost:8080/api/mailer", {
+    fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
