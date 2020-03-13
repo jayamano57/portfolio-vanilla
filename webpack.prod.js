@@ -67,7 +67,7 @@ const serverConfig = {
     __dirname: false
   },
   plugins: [
-    new Dotenv()
+    new Dotenv({ path: path.resolve(__dirname, "./.env") })
     // new webpack.DefinePlugin({
     //   "process.env": {
     //     NODE_EMAIL: JSON.stringify(process.env.NODE_EMAIL),
