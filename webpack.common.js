@@ -4,11 +4,7 @@ module.exports = {
   node: {
     __dirname: false
   },
-  plugins: [
-    new Dotenv({
-      path: path.resolve(__dirname, "./.env")
-    })
-  ],
+  plugins: [new Dotenv()],
   module: {
     rules: [
       {
