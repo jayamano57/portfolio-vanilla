@@ -4,7 +4,14 @@ module.exports = {
   node: {
     __dirname: false
   },
-  plugins: [new Dotenv()],
+  plugins: [
+    new webpack.DefinePlugin({
+      "process.env": {
+        NODE_EMAIL: JSON.stringify(process.env.NODE_EMAIL),
+        NODE_PASS: JSON.stringify(process.env.NODE_PASS)
+      }
+    })
+  ],
   module: {
     rules: [
       {
