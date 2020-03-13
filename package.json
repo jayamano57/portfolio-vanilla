@@ -5,7 +5,7 @@
   "scripts": {
     "start:dev": "node server.js & webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
-    "start": "node ./dist/server.min.js",
+    "start": "node ./server.min.js",
     "deploy": "cd dist && git push heroku master"
   },
   "author": "",
