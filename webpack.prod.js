@@ -69,10 +69,8 @@ const serverConfig = {
   plugins: [
     // new Dotenv()
     new webpack.DefinePlugin({
-      "process.env": {
-        NODE_EMAIL: process.env.NODE_EMAIL,
-        NODE_PASS: JSON.stringify(process.env.NODE_PASS)
-      }
+      "process.env.NODE_EMAIL": JSON.stringify(process.env.NODE_EMAIL),
+      "process.env.PASS": JSON.stringify(process.env.NODE_PASS)
     })
   ]
 };
