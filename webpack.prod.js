@@ -2,6 +2,7 @@ const path = require("path");
 const common = require("./webpack.common");
 const merge = require("webpack-merge");
 const webpack = require("webpack");
+const Dotenv = require("dotenv");
 require("dotenv").config();
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -67,11 +68,11 @@ const serverConfig = {
     __dirname: false
   },
   plugins: [
-    // new Dotenv()
-    new webpack.DefinePlugin({
-      "process.env.NODE_EMAIL": JSON.stringify(process.env.NODE_EMAIL),
-      "process.env.NODE_PASS": JSON.stringify(process.env.NODE_PASS)
-    })
+    new Dotenv()
+    // new webpack.DefinePlugin({
+    //   "process.env.NODE_EMAIL": JSON.stringify(process.env.NODE_EMAIL),
+    //   "process.env.NODE_PASS": JSON.stringify(process.env.NODE_PASS)
+    // })
   ]
 };
 
