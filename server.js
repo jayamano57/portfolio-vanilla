@@ -30,7 +30,7 @@ app.post("/api/mailer", function(req, res) {
     service: "gmail",
     auth: {
       user: "jayamano57@gmail.com",
-      pass: "fqvgxxvehqmzvnvq"
+      pass: "ngdkvnvscbyelieu"
     }
   });
 
