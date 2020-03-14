@@ -67,11 +67,11 @@ const serverConfig = {
     __dirname: false
   },
   plugins: [
-    new Dotenv()
-    // new webpack.DefinePlugin({
-    //   NODE_EMAIL: JSON.stringify(process.env.NODE_EMAIL),
-    //   NODE_PASS: JSON.stringify(process.env.NODE_PASS)
-    // })
+    // new Dotenv()
+    new webpack.DefinePlugin({
+      NODE_EMAIL: JSON.stringify(process.env.NODE_EMAIL),
+      NODE_PASS: JSON.stringify(process.env.NODE_PASS)
+    })
   ]
 };
 
