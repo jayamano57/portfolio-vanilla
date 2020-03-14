@@ -22,8 +22,8 @@ app.get("/*", function(req, res) {
 app.use(cors());
 app.options("*", cors());
 
-app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 app.post("/api/mailer", function(req, res) {
   const transporter = nodemailer.createTransport({
