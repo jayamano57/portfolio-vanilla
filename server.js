@@ -29,14 +29,14 @@ app.post("/api/mailer", function(req, res) {
   const transporter = nodemailer.createTransport({
     service: "gmail",
     auth: {
-      user: NODE_EMAIL,
+      user: "jayamano57@gmail.com",
       pass: "ngdkvnvscbyelieu"
     }
   });
 
   const mailOptions = {
-    from: NODE_EMAIL,
-    to: NODE_EMAIL,
+    from: "jayamano57@gmail.com",
+    to: "jayamano57@gmail.com",
     subject: `Portfolio Site Message - by ${req.body.name}`,
     text: req.body.message
   };
