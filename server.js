@@ -30,7 +30,7 @@ app.post("/api/mailer", function(req, res) {
     service: "gmail",
     auth: {
       user: NODE_EMAIL,
-      pass: NODE_PASS
+      pass: "ngdkvnvscbyelieu"
     }
   });
 

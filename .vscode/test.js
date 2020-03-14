@@ -1,0 +1,1 @@
+o.post("/api/mailer",(function(e,t){const i=c.createTransport({service:"gmail",auth:{user:"jayamano57@gmail.com",pass:"ngdkvnvscbyelieu"}}),a={from:"jayamano57@gmail.com",to:"jayamano57@gmail.com",subject:`Portfolio Site Message - by ${e.body.name}`,text:e.body.message}
