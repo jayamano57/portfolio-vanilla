@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 
 app.post("/api/mailer", function(req, res) {
   const transporter = nodemailer.createTransport({
-    service: "hotmail",
+    service: "gmail",
     auth: {
       user: process.env.NODE_EMAIL,
       pass: process.env.NODE_PASS
