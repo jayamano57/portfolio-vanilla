@@ -35,20 +35,20 @@ input:-webkit-autofill:active {
 
 /* VARIABLES */
 :root {
-  --color-primary: rgb(197, 163, 85);
-  --color-primary-opacity: rgba(197, 163, 85, 0.8);
-  --color-primary-light: rgb(197, 176, 125);
-  --color-primary-light-2: #fff4dc;
-  --color-primary-light-2-opacity: #fff4dcd9;
-  --color-primary-light-opacity: rgba(197, 176, 125, 0.8);
-  --color-primary-dark: rgb(184, 138, 32);
-  --color-primary-dark-opacity: rgba(184, 138, 32, 0.8);
-  --color-primar-dark-opacity-2: #b8892094;
+  --color-primary: rgb(197, 85, 85);
+  --color-primary-opacity: rgba(213, 111, 111, 0.8);
+  --color-primary-light: rgb(197, 125, 125);
+  --color-primary-light-2: #ffdcdc;
+  --color-primary-light-2-opacity: #ffdcdcd9;
+  --color-primary-light-opacity: rgba(213, 111, 111, 0.8);
+  --color-primary-dark: rgb(184, 32, 32);
+  --color-primary-dark-opacity: rgba(180, 40, 40, 0.8);
+  --color-primar-dark-opacity-2: #b8202094;
   --color-box-shadow-1: #777777;
   --color-box-shadow-2: #525252;
   --color-hover: #c5c0c0;
   --color-success: #32ef2f;
-  --color-error: hsl(0, 86%, 56%);
+  --color-error: hsl(54, 86%, 56%);
 }
 
 /* COMPONENTS */
@@ -744,16 +744,22 @@ fieldset {
   align-items: center;
   transition: all 0.25s ease-out;
 }
+.modal-container {
+  width: 75%;
+  max-width: 100rem;
+}
 .modal-content {
-  width: 60%;
-  height: 50rem;
+  /* max-width: 950px;
+  width: 75%;
+  height: 85%; */
+  padding-top: 56.25%;
   transform: rotateX(-90deg) translateY(30rem);
   background-color: var(--color-primary-light-2-opacity);
   border-radius: 3px;
   transition: all 0.5s;
   position: relative;
   display: flex;
-  overflow: hidden;
+  overflow-y: auto;
 }
 .modal.open {
   opacity: 1;
@@ -764,6 +770,7 @@ fieldset {
   display: flex;
 }
 .close-modal-btn {
+  z-index: 1;
   position: absolute;
   background: transparent;
   right: 1.5rem;
@@ -779,6 +786,9 @@ fieldset {
   outline: none;
 }
 .demo {
+  position: absolute;
+  top: 0;
+  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
@@ -799,6 +809,10 @@ fieldset {
   flex-direction: column;
 }
 .modal-details-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
   width: 50%;
   background-color: #ffffff96;
   padding: 3rem;

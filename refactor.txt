@@ -25,8 +25,9 @@ Responsive:
 - font awesome requests clean up
 - toastr on top;
 - nav background filter blur
-- hanldle current email
-- fix node mailer: has to do with .env
+- hanldle current email error
+- max-width to mdal
+- fill content
 
 
 ======= backlog
