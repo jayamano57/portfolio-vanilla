@@ -842,7 +842,6 @@ fieldset {
   margin-right: 3px;
 }
 .modal-technologies {
-  overflow-y: auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -852,7 +851,6 @@ fieldset {
   background-color: #ffffff96;
   box-shadow: 0 1px 0.5rem var(--color-box-shadow-1);
   border-radius: 3px;
-  height: 45px;
 }
 .technology {
   height: 4.5rem;
