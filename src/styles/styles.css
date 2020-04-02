@@ -825,6 +825,7 @@ fieldset {
   overflow: auto;
 }
 .modal-details {
+  position: relative;
   font-size: 1.2rem;
   flex: 1;
   padding-bottom: 3rem;
@@ -832,8 +833,8 @@ fieldset {
 .github-link {
   position: absolute;
   font-size: 1.2rem;
-  bottom: 1.5rem;
-  right: 3rem;
+  bottom: 0;
+  right: 0;
   text-decoration: none;
   color: black;
   display: flex;
