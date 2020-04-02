@@ -35,24 +35,25 @@ input:-webkit-autofill:active {
 
 /* VARIABLES */
 :root {
-  --color-primary: rgb(197, 85, 85);
-  --color-primary-opacity: rgba(213, 111, 111, 0.8);
-  --color-primary-light: rgb(197, 125, 125);
-  --color-primary-light-2: #ffdcdc;
-  --color-primary-light-2-opacity: #ffdcdcd9;
-  --color-primary-light-opacity: rgba(213, 111, 111, 0.8);
-  --color-primary-dark: rgb(184, 32, 32);
-  --color-primary-dark-opacity: rgba(180, 40, 40, 0.8);
-  --color-primar-dark-opacity-2: #b8202094;
+  --color-primary: rgb(92, 85, 197);
+  --color-primary-opacity: rgba(113, 111, 213, 0.8);
+  --color-primary-light: rgb(130, 125, 197);
+  --color-primary-light-2: #dddcff;
+  --color-primary-light-2-opacity: #dcddffd9;
+  --color-primary-light-opacity: rgba(111, 113, 213, 0.8);
+  --color-primary-dark: rgb(35, 32, 184);
+  --color-primary-dark-opacity: rgba(49, 40, 180, 0.8);
+  --color-primar-dark-opacity-2: #2320b894;
   --color-box-shadow-1: #777777;
   --color-box-shadow-2: #525252;
-  --color-hover: #c5c0c0;
+  --color-hover: #c0c0c5;
   --color-success: #32ef2f;
   --color-error: hsl(54, 86%, 56%);
 }
 
 /* COMPONENTS */
 .section-heading {
+  padding: 0 1rem;
   font-size: 4rem;
   text-align: center;
   letter-spacing: 0.25rem;
@@ -218,7 +219,7 @@ input:-webkit-autofill:active {
       var(--color-primary-light-opacity),
       var(--color-primary-dark-opacity)
     ),
-    url(../media/tokyo_day.jpg);
+    url(../media/tokyo_night.jpg);
   background-size: cover;
   position: relative;
   z-index: 1;
@@ -236,7 +237,7 @@ input:-webkit-autofill:active {
   font-weight: 400;
   border-bottom: 1px solid white;
   padding-bottom: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 3rem;
   color: white;
   letter-spacing: 2rem;
   padding-left: 2rem;
@@ -245,7 +246,7 @@ input:-webkit-autofill:active {
 }
 .title-box > .title-box-title {
   display: inline-block;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 300;
   color: white;
   letter-spacing: 0.3rem;
@@ -258,7 +259,7 @@ input:-webkit-autofill:active {
 /* ABOUT ME */
 .about-me {
   background-color: var(--color-primary-light-2);
-  padding: 25rem 0 35rem;
+  padding: 22rem 0 33rem;
   margin-top: -20vh;
 }
 .about-me-content {
@@ -271,12 +272,13 @@ input:-webkit-autofill:active {
 .about-me-blurb {
   width: 60%;
   padding-right: 5rem;
-  padding-top: 3rem;
+  padding-top: 8rem;
   font-size: 1.6rem;
 }
 .blurb-intro {
-  font-size: 3rem;
-  font-weight: 700;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 2rem;
 }
 .about-me-img-gallery {
   position: relative;
@@ -286,6 +288,7 @@ input:-webkit-autofill:active {
   display: flex;
 }
 .about-me-img-gallery > * {
+  box-shadow: 0 0.3rem 1.5rem var(--color-box-shadow-1);
   position: absolute;
   width: 55%;
   transition: transform 0.1s;
@@ -436,16 +439,16 @@ input:-webkit-autofill:active {
   visibility: hidden;
 }
 .project-1.project-card {
-  background-color: var(--color-primary-light-2);
+  background-image: linear-gradient(to right bottom, #dedeff, #a5a5e7);
 }
 .project-2.project-card {
-  background-color: #a9e8e3;
+  background-image: linear-gradient(to right bottom, #dbfffc, #5dd5cb);
 }
 .project-3.project-card {
-  background-color: #b6c7ec;
+  background-image: linear-gradient(to right bottom, #fbffdb, #c8d55d);
 }
 .project-4.project-card {
-  background-color: #ffe5d2eb;
+  background-image: linear-gradient(to right bottom, #ffcece, #fe8282);
 }
 figure {
   margin: 0.5rem 0.5rem 0 0.5rem;
@@ -501,8 +504,8 @@ figcaption {
 }
 .more-info-btn:hover {
   cursor: pointer;
-  color: #6a5015;
-  border-color: #6a5015;
+  color: black;
+  border-color: black;
 }
 .more-info-btn:focus {
   outline: none;
@@ -803,6 +806,7 @@ fieldset {
   border: none;
 }
 .external-links {
+  overflow: auto;
   flex: 1;
   padding: 2rem;
   display: flex;
@@ -818,8 +822,10 @@ fieldset {
   padding: 3rem;
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 .modal-details {
+  font-size: 1.2rem;
   flex: 1;
   padding-bottom: 3rem;
 }

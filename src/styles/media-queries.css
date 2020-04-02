@@ -69,6 +69,7 @@
   }
   .about-me-blurb {
     width: 100%;
+    padding-top: 4rem;
     padding-right: 0;
   }
   .about-me-img-gallery {
@@ -169,7 +170,7 @@
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
   }
   .section-heading {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .projects .section-heading {
     margin-bottom: 8rem;
@@ -281,6 +282,9 @@
   .nav-icon::after {
     height: 1px;
   }
+  .section-heading {
+    font-size: 4rem;
+  }
   .about-me-img-gallery > * {
     width: 50%;
   }
@@ -351,6 +355,9 @@
 
 /* 440px */
 @media only screen and (max-width: 27.5em) {
+  .section-heading {
+    font-size: 3.5rem;
+  }
   .about-me {
     padding-bottom: 50rem;
   }
