@@ -9,7 +9,6 @@ import reactImg from "../media/React-01.png";
 import bootstrapImg from "../media/bootstrap.png";
 import mssqlImg from "../media/ms_sql.png";
 import workInProgress from "../media/work-in-progress.jpg";
-import placeholderImg from "../media/placeholder-img.png";
 import mcmacroImg from "../media/mcmacro.png";
 import sassImg from "../media/sass.png";
 import materialUIImg from "../media/material-ui.png";
