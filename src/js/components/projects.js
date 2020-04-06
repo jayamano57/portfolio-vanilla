@@ -9,7 +9,7 @@ import {
   modal,
   technologiesContainerEl,
   videoEl,
-  descriptionEl
+  descriptionEl,
 } from "../elements.js";
 
 const carouselWidth = carousel.offsetWidth;
@@ -32,12 +32,18 @@ export const renderProjects = () => {
         src="${project.screenshot}"
         alt="placeholder image"
       />
-      <figcaption>${project.title}</figcaption>
+      <figcaption>
+      ${project.isComplete ? project.title : `${project.title} (In Progress)`}
+      </figcaption>
     </figure>
     <div class="project-description-short">
       ${project.shortDescription}
     </div>
-    <button class="more-info-btn">MORE INFO &rarr;</button>
+    ${
+      project.isComplete
+        ? '<button class="more-info-btn">MORE INFO &rarr;</button>'
+        : ""
+    }
   </div>
 `;
     index > 2 &&
@@ -49,7 +55,7 @@ export const renderProjects = () => {
   initPageDots();
 };
 
-export const carouselScroll = e => {
+export const carouselScroll = (e) => {
   switch (e.currentTarget.dataset.direction) {
     case "right":
       slideNumber += 1;
@@ -74,7 +80,7 @@ export const carouselScroll = e => {
 
 export const updateCardVisibility = () => {
   const cards = document.querySelectorAll(".project-card");
-  cards.forEach(project => {
+  cards.forEach((project) => {
     project.style.visibility = "hidden";
   });
   for (let i = 0; i < cardCount; i++) {
@@ -120,7 +126,7 @@ export const initPageDots = () => {
   pageDotsContainer.children[0].classList.add("active");
 };
 
-export const openModal = e => {
+export const openModal = (e) => {
   clearModal();
   const project = e.currentTarget.offsetParent.dataset.name;
   populateModal(project);
@@ -133,8 +139,8 @@ export const clearModal = () => {
   descriptionEl.innerHTML = "";
 };
 
-export const populateModal = projectName => {
-  const index = data.projects.findIndex(project => {
+export const populateModal = (projectName) => {
+  const index = data.projects.findIndex((project) => {
     return project.name === projectName;
   });
   let { demo, technologies, description, screenshot, gitHub } = data.projects[
@@ -149,7 +155,7 @@ export const populateModal = projectName => {
     : (videoEl.style.cssText = `background-image: url("${screenshot}"); background-size: cover`);
 
   // Append technology icons
-  technologies.forEach(technology => {
+  technologies.forEach((technology) => {
     technologiesContainerEl.innerHTML += `<div class="technology" data-tech-name="${
       technology.name
     }">${
@@ -170,7 +176,7 @@ export const populateModal = projectName => {
     );
 };
 
-export const closeModal = e => {
+export const closeModal = (e) => {
   if (e.target === e.currentTarget || e.currentTarget === closeModalBtn) {
     modal.classList.remove("open");
   }

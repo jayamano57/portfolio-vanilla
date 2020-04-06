@@ -10,24 +10,9 @@
 10. clean up z-indexes
 
 =======
-To-do
-- go step-by-step and add in modules
-=======
-Responsive:
-3. test responsive
-2. loading state for button
-4. refactor (js -> html -> css)
-5. populate data 
-5. cross browser compatibility
-6. webpack
-
-=======
 - font awesome requests clean up
 - toastr on top;
 - nav background filter blur
-- hanldle current email error
-- max-width to mdal
-- fill content
 
 
 ======= backlog

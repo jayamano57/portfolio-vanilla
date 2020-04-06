@@ -4,7 +4,7 @@ export const toggleNav = () => {
   navBtn.classList.toggle("open");
 };
 
-export const scrollToSection = e => {
+export const scrollToSection = (e) => {
   const section = e.currentTarget.dataset.section;
   const sectionHeaderEl = document.querySelector(`.${section}`)
     .firstElementChild;
@@ -16,7 +16,7 @@ export const scrollToSection = e => {
     case "header":
       y = 0;
       break;
-    case "about-me":
+    case "welcome":
       y = currentY + elCoords.y - 10;
       break;
     case "projects":
@@ -31,6 +31,6 @@ export const scrollToSection = e => {
   window.scroll({
     top: y,
     left: 0,
-    behavior: "smooth"
+    behavior: "smooth",
   });
 };
